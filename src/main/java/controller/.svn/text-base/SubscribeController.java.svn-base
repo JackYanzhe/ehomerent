@@ -1,0 +1,228 @@
+package controller;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import biz.SubscribeBiz;
+
+import entity.House;
+import entity.Subscribe;
+import entity.User;
+
+
+@RequestMapping("/subscribe")
+@Controller("SubscribeController")
+public class SubscribeController {
+	
+	@Autowired
+	@Qualifier("subscribeBiz")
+	public SubscribeBiz subscribeBiz;
+	
+	public SubscribeController(){
+		System.out.println("===================实例化订阅类=========================");
+	}
+	/*三级级联json数据*/
+	@ResponseBody
+	@RequestMapping("getAreaJson2")
+	public String getAreaJson2(){
+		StringBuffer sBuffer=new StringBuffer();
+		InputStream iStream=this.getClass().getClassLoader().getResourceAsStream("/jsondata/pcctjsondata3.json");
+		BufferedReader bReader;
+		try {
+			bReader = new BufferedReader(new InputStreamReader(iStream,"UTF-8"));
+			String readline=bReader.readLine();
+			
+			while (readline!=null) {
+				sBuffer.append(readline);
+				readline=bReader.readLine();
+			}
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return sBuffer.toString();
+	}
+	/**
+	 * 插入房源订阅信息和修改房源
+	 * @param subscribe
+	 * @param model
+	 * @return
+	 */
+	@RequestMapping("saveSubInfo")
+	public String saveSubInfo(Subscribe subscribe,Model model,HttpSession session){
+		/*System.out.println("*******进入房源订阅页**********");*/
+		Date date=new Date();
+		SimpleDateFormat sDateFormat=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	    String dateStr = sDateFormat.format(date);
+		User user=(User) session.getAttribute("user");
+		String msg=null;
+		if(user!=null){
+			Long userid=(long)user.getUserid();
+			Subscribe subscribeInfo = subscribeBiz.showSubscribeInfo(userid);
+			if(subscribeInfo!=null){
+				//如果用户已经有房源订阅信息，则进行房源的修改
+				subscribe.setUser(user);
+				if(dateStr!=null&&subscribe.getUser().getUserid()!=null&&subscribe.getRentmoneymax()!=null&&subscribe.getRentmoneymin()!=null){
+					 subscribe.setSubsubmitdate(dateStr);
+					 int upNum = subscribeBiz.updateSubInfo(subscribe);
+					 model.addAttribute("msgsub", "修改调用成功");
+					 System.out.println("修改调用成功");
+					 msg="house_subscribe_update";
+				}
+				
+			}else {
+				//此时为用户还没有进行房源订阅
+				long subNum=0;
+				if(date!=null&&subscribe.getSubarealocalinfo()!=null&&subscribe.getRentmoneymin()!=null&&subscribe.getRentmoneymax()!=null){
+					subscribe.setSubsubmitdate(dateStr);
+					subscribe.setUser(user);
+					subNum=subscribeBiz.saveSubscribeInfo(subscribe);
+				}
+				if(subNum>0){
+					model.addAttribute("msgsub", "订阅成功");
+					System.out.println("保存成功");
+					
+				}
+				msg="house_subscribe_update";
+			}
+		}else {
+			msg="login";
+		}
+		return msg;
+	}
+	
+	/**
+	 * 首页进行通过用户id查看用户订阅房源信息
+	 * @return updateSubInfo
+	 */
+	@RequestMapping("showUserSubHouseInfo")
+	public String showUserSubHouseInfo(Model model,HttpSession session){
+		User user = (User) session.getAttribute("user");
+		String msg=null;
+		if(user!=null){
+		  Long userId=(long)user.getUserid();
+		 /* System.out.println(userId+"!!!!!!!!!!!!!!!!!!!!!!!!!!");*/
+		  Subscribe subscribe=subscribeBiz.showSubscribeInfo(userId);
+		  model.addAttribute("subscribe",subscribe);
+		/*  System.out.println("成工通过用户id查看用户订阅房源信息");*/
+		  msg="house_subscribe_update";
+		}else {
+			msg="login";
+		}
+		
+		return msg;
+		
+	}
+	/**
+	 *  查看是否有符合订阅条件的房源信息
+	 * @return
+	 */
+	@RequestMapping("checkSubInfo")
+	 public String checkSubInfo(HttpSession session,Model model){
+		User user2= (User) session.getAttribute("user");
+		String msg="";
+		if(user2!=null){
+			Subscribe showSubscribeInfo = subscribeBiz.showSubscribeInfo((long)user2.getUserid());
+			if(showSubscribeInfo!=null){
+				List<House> hsList = subscribeBiz.checkSubInfo(showSubscribeInfo);
+				model.addAttribute("hslist", hsList);
+			}
+			msg="subscribe_remind";
+			
+		}else {
+			msg="login";
+			
+		} 
+		
+		 return msg;
+	 }
+	
+	/**
+	 * 显示消息通知
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping("showSubMsgInfo")
+	public String  showSubMsgInfo(HttpSession session){
+		User user2= (User) session.getAttribute("user");
+		String msg="";
+		if(user2!=null){
+			//查询用户是否有订阅信息
+			Subscribe showSubscribeInfo = subscribeBiz.showSubscribeInfo((long)user2.getUserid());
+			if (showSubscribeInfo!=null) {
+				List<House> hsList = subscribeBiz.checkSubInfo(showSubscribeInfo);
+				int hsub=hsList.size();
+				msg=hsub+"";
+			}else {
+				msg=0+"";
+			}
+		}
+		
+		return msg;
+	}
+	/**
+	 * 全局搜索功能
+	 * @return
+	 */
+	@RequestMapping("/searchHouseInfo")
+	public String searchHouseInfo(String searchInfo,Model model,String rentypeInfo,Integer pageNo){
+		if (pageNo==null) {
+			pageNo=1;
+		}
+		System.out.println(pageNo);
+		Integer pageSize=10;
+		//总页数
+		Integer totalpagenum=0;
+		
+		Integer housesNum = subscribeBiz.searchGlobalHousesNum(searchInfo, rentypeInfo, pageNo, pageSize);
+		if(housesNum!=0){
+			if(housesNum%pageSize==0){
+				totalpagenum=housesNum/pageSize;
+			}else {
+				totalpagenum=(housesNum/pageSize)+1;
+			}
+		}
+		
+		System.out.println(housesNum+"---------------------------");
+		List<House> sghlist = subscribeBiz.searchGlobalHouses(searchInfo, rentypeInfo, pageNo, pageSize);
+		model.addAttribute("sghlist",sghlist);
+		model.addAttribute("searchInfo",searchInfo);
+		model.addAttribute("pageNo",pageNo);
+		model.addAttribute("totalpagenum",totalpagenum);
+		for (House house : sghlist) {
+			System.out.println(house.getHouseadress());
+		}
+		//System.out.println(sghlist.size()+"************全局搜索功能**********");
+		
+		return "search_houseinfo";
+	}
+	
+	
+	public SubscribeBiz getSubscribeBiz() {
+		return subscribeBiz;
+	}
+	public void setSubscribeBiz(SubscribeBiz subscribeBiz) {
+		this.subscribeBiz = subscribeBiz;
+	}
+	
+	
+     
+}

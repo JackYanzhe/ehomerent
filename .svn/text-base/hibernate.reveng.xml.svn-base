@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+
+	<table name="TB_CHARGE" schema="EHOME" class="Charge"></table>
+	<table name="TB_ELECTRIC" schema="EHOME" class="Electric"></table>
+	<table name="TB_FURNITURE" schema="EHOME" class="Furniture"></table>
+	<table name="TB_HOUSE" schema="EHOME" class="House"></table>
+	<table name="TB_HOUSEIMG" schema="EHOME" class="Houseimg"></table>
+	<table name="TB_USER" schema="EHOME" class="User"></table>
+	<table name="TB_SUBSCRIBE" schema="EHOME" class="Subscribe"></table>
+	
+</hibernate-reverse-engineering>

@@ -1,0 +1,4185 @@
+/* 未能缩小。正在返回未缩小的内容。
+(3770,1): run-time error CSS1035: Expected colon, found '}'
+ */
+*{ -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; /*定内边*/}
+body{overflow-x:hidden; padding:0;height:100%;color:#474747;background:#f6f6f6;font-size:16px;font-family:Segoe UI,"Microsoft YaHei","Hiragino Sans GB","华文细黑","STHeiti",SimHei,"Helvetica Neue",Helvetica,Arial,sans-serif !important;}
+div,form,span,p,img,a img{border:0;margin:0;padding:0;}
+ul,ol,li{border:0;list-style:none;margin:0;padding:0}
+table,td,input{font-size:1em;}
+a:link{text-decoration:none;color:#474747;}
+a:visited{text-decoration:none;color:#696969;}
+a:active,a:hover{text-decoration:underline;color:#ee7500;}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {color:#999;}
+input:-moz-placeholder, textarea:-moz-placeholder {color:#999;}
+input::-moz-placeholder, textarea::-moz-placeholder {color:#999;}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {color:#999;}
+.pure-g{
+    display: flex;
+    flex-flow:row wrap;
+}
+/*.pure-g-r {
+    display: flex;
+}*/
+
+/* 设置Pure框架字体 */
+.pure-g [class *= "pure-u"],pre {font-family:Segoe UI,"Microsoft YaHei","Hiragino Sans GB","华文细黑","STHeiti",SimHei,"Helvetica Neue",Helvetica,Arial,sans-serif !important;}
+
+/* 手机端隐藏 */
+.hide-xs{display:none;}
+.hide-xs-inline{display:none;}
+.hide-xs-inline-block{display:none;}
+/* 手机端显示 */
+.show-xs{display:block;}
+.show-xs-inline{display:inline;}
+.show-xs-inline-block{display:inline-block;}
+
+.clearfix:before,.clearfix:after {  display: table;  content: " ";}
+.clearfix:after {  clear: both;}
+
+.text-center {text-align:center;}
+.text-right {text-align:right;}
+
+.pure-button {
+    background:#f5f5f5;
+    color:#494949;
+}
+.btn-primary{
+    color:#fff;
+    background: #ee7500;    
+}
+.btn-success{
+    color:#fff;
+    background:#37b04e;
+}
+.btn-error{
+    color:#fff;
+    background:#af3738;
+}
+.btn-warning{
+    color:#fff;
+    background:#b07b37;
+}
+.btn-secondary {
+    color:#fff;
+    background:#37acb0;
+}
+.highlight {
+    color:#ee7500;
+}
+.cursor-point {
+    cursor:pointer;
+}
+
+
+
+/* 
+ * -- Icon font size 字体文件已经移植到外链CDN中 if 字体修正 -- */
+.if { position: relative; top: -1px; display: inline-block; }
+.if-xs { font-size: 0.65em; }
+.if-sm { font-size: 0.8em; }
+.if-nr { font-size: 1em; }
+.if-lg { font-size: 1.33333333em; line-height: 0.75em; }
+.if-2x { font-size: 2em; }
+
+.header {width:100%;background:#fff;position:relative;z-index:1000;}
+
+.header-home{position:relative;}
+
+.header-home .ad-title{
+    /*mobile hide*/
+    display:none;
+}
+
+.header-home .search-box{
+    width:100%;text-align:center; position:absolute;
+    bottom:0;padding:2em 0; z-index:10099;
+    /*background:rgba(71, 71, 71, 0.35)*/
+}
+.header-normal {
+	-webkit-box-shadow:1px 0 5px rgba(51, 52, 52, 0.80);  
+	-moz-box-shadow:1px 0 5px rgba(51, 52, 52, 0.80);  
+	box-shadow:1px 0 5px rgba(51, 52, 52, 0.80); 
+}
+.menu-search {
+	/*border-bottom:1px solid #c6c6c6;*/
+	-webkit-box-shadow:0 0 5px rgba(51, 52, 52, 0.80);  
+	-moz-box-shadow:0 0 5px rgba(51, 52, 52, 0.80);  
+	box-shadow:0 0 5px rgba(51, 52, 52, 0.80); 
+
+}
+
+.ram-slider{
+    margin:0; 
+    position:relative;
+    border:none; 
+    background:#333;
+    -webkit-border-radius:0;
+    -moz-border-radius:0;border-radius:0;
+    -webkit-box-shadow:none;
+    -moz-box-shadow:none;
+    box-shadow:none; 
+    zoom:1;
+    height:100%;
+    max-height:560px;
+    overflow:hidden;
+    cursor:pointer;
+}
+.ram-slider #slider-default {display:block;}
+/* 
+    ====== 弹出框 ====== */
+.white-popup {
+  position: relative;
+  background: #FFF;  
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+}
+.white-popup .mfp-close {
+    background:#d4d4d4;
+}
+.white-popup .pop-title{
+    height:44px;
+    font-size:1.2em;
+    padding:10px 0 0 1em;
+    background:#e2e2e2;
+}
+.white-popup .pop-body{
+    padding:1em;
+}
+.white-popup .pop-btn {
+    margin:2em 0;
+}
+.white-popup .pop-btn .pure-button{
+    margin-right:2em;
+}
+.white-popup .pop-line {        
+    font-size:1px;
+    line-height:1px;
+    height:1px;
+    border-bottom:1px solid #d6d6d6;
+}
+
+/* 首页 导航菜单 */
+.pure-menu-horizontal{
+    white-space:normal;
+}
+.home-menu {
+    width:1200px;
+    z-index:10099;    
+    background:rgba(255, 255, 255, 1);
+}
+.home-menu .pure-menu-selected a {
+    color:#474747;
+    text-shadow:none;
+}
+
+.home-menu .pure-menu-selected a:hover {
+    color:#ee7500;
+}
+.home-menu a{
+    padding:1.5em .8rm;
+    color:#474747;
+}
+.home-menu li a:hover,
+.home-menu li a:focus {
+    color:#ee7500;
+    background:none; 
+    text-decoration:none; 
+}
+.home-menu .pure-menu-heading,.con-orgs .pure-menu-heading,.con-more .pure-menu-heading{ 
+    float:left;
+    margin-left:.8em;
+    padding-right:110px;
+    background: url('/images/icon.png') no-repeat;
+    text-indent:-999px;    
+}
+
+.home-menu .heading-MY, .main-menu .heading-MY{     
+    background-position:0 -336px;
+    padding-right:60px;
+}
+.home-menu .heading-MR,.main-menu .heading-MR {     
+    background-position:0 -574px;
+    padding-right:88px;
+    
+}
+.home-menu ul.more-logo{
+    float:left;
+    height:61px;
+}
+.home-menu ul.more-logo li{
+    float:left;
+    height:100%;
+}
+.home-menu ul.more-logo li a{
+    line-height:61px;
+    padding:0 20px;
+    font-size:16px;
+}
+.home-menu ul.more-logo li.city{
+    padding-right:30px;
+    padding-left:10px;
+    position:relative;
+}
+.home-menu ul.more-logo li.city ol{
+    position:absolute;
+    z-index:10000;
+    top:61px;
+    left:-10px;
+    background-color:#fff;
+    border-radius:0 0 5px 5px;
+    overflow:hidden;
+    display:none;
+}
+.home-menu ul.more-logo li.city:hover ol{
+    display:block;
+}
+.home-menu ul.more-logo li.city ol li{
+    width:100%;
+    padding:10px;
+    text-align:center;
+    cursor:pointer;
+}
+.home-menu ul.more-logo li.city ol li:hover{
+    background-color:#f6f6f6;
+}
+.home-menu ul.more-logo li a .if-weizhi{
+    color:#ee7500;
+    font-size:1.1875rem;
+    margin-right:2px;
+}
+.home-menu ul.more-logo li a:hover{
+    color:#ee7500;
+}
+.home-menu ul.more-logo li a.active{
+    color:#ee7500;
+}
+.home-menu ul.pure-menu-list {
+    float:right;
+}
+/*首页导航二维码样式*/
+.appStyle {
+    position: absolute;
+    left: 50%;
+    margin-left: -42px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    line-height: 16px;
+    z-index: 5000;
+    display: none;
+    background-color: #fff;
+    padding: 5px;
+    background-size: contain;
+    top: 50px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.2);
+}
+
+.imgStyle {
+    width: 150px;
+}
+.pStyle {
+    padding-bottom: 10px;
+}
+
+.menuStyle {
+    position: relative;
+}
+
+.menuStyle:hover + #appStyle {
+    display: block;
+}
+
+/* 首页 搜索条 */
+
+.header-home .search-group{               
+    margin:0 auto;
+    position:relative;font-size:18px;
+}
+.header-home .search-group .submit-btn{
+    height:44px;
+}
+.header-home .search-box form{
+    display:inline-block;    
+}
+.header-home .search-group label,.con-orgs .search-group label{
+	display:inline-block;
+}
+.header-home .search-group .box-text,.con-orgs .search-group .box-text {   
+    line-height:44px;
+    height:44px;
+    padding-left:30px;
+    border:none;
+    border-radius:4px 0 0 4px;
+    box-shadow:none;  
+	vertical-align:middle;  
+}
+.con-orgs .heading-MY{
+    padding-bottom:35px;
+}
+.header-home .search-group .box-text:focus{
+	outline:none;
+}
+.search-group-btn {
+    height:44px;
+    line-height:44px;
+    background: #ee7500; 
+    color:#fff;
+    border-radius:0 4px 4px 0;
+    padding-top:0px;padding-bottom:0px;
+}
+.header-home .search-group .if-mapicon {
+	display:inline;
+    position:relative;right:-30px;top:1px; color:#b0b0b0;z-index:12000;
+}
+.city-box{
+    width:100%;
+    top:45px;
+}
+.city-box:before{    
+    border-color:transparent;
+    border-style:hidden;
+}
+.city-box .prov-city p{
+    background:#ee7500;
+    color:#fff;
+    line-height:2.5em;
+    padding:0 15px;
+    text-align:left;
+}
+/* 通用页脚 */
+.footer {
+    background:#f6f6f6;
+    color:#696969;    
+}
+.footer-corp {
+    padding-top:1.5em;
+}
+.footer-corp .corp-title {
+    font-size:1.1em;    
+    margin:0 0 1.1em 0;
+}
+.footer-corp .corp-links li{
+    margin-bottom:1em;
+}
+.footer-corp .corp-links a{
+    color:#696969;
+}
+.footer-corp .corp-links a:hover{
+    color:#ee7500;
+}
+.footer-corp .service-wrapper {
+    margin:2em 0 0 1.5em;   
+}
+.footer-corp .call-to-us{
+    font-size:1.5em;  
+    margin-top:1em;     
+    margin-bottom:.5em;
+    color:#ee7500;
+}
+.footer-corp .app-way {
+    margin-top:1em;
+}
+.footer-corp .app-way a {
+    text-decoration:none;
+}
+.footer-corp .app-way .if {
+    font-size:1.2em;
+    margin-left:.4em;
+}
+.footer-corp .app-way .if-ios,.footer-corp .app-way .if-android{
+    color:#ee7500;
+}
+.footer-corp .weichat,.footer-corp .app {
+    position:relative;
+}
+.footer-corp .weichat:before,.footer-corp .app:before{
+    content:'扫描下载魔方生活';
+    position:absolute;        
+    color:#999;
+    left:25%;
+    top:50%;
+    transform:translate(0,-50%);
+    -webkit-transform:translate(0,-50%);
+    line-height:1em;
+    width:1em;        
+    font-size:12px;
+}
+.footer-corp .app:before{
+    content:'扫描关注微信号';
+}
+.footer-corp .weichat img,.footer-corp .app img{
+    float:right;    
+    width:60%;   
+    max-width:150px;
+}
+.footer-copyright {
+    color:#9f9f9f;
+}
+
+.footer-copyright .icp {    
+    margin-top:.5em;
+}
+.footer-corp .corp-links-xs {
+    margin:1em 0;
+    text-align:center;
+}
+.footer-corp .corp-links-xs a{
+    display:inline-block;
+    padding:0 .5em;
+}
+.footer .line {
+    margin-top:16px;
+    font-size:1px;
+    line-height:1px;
+    height:1px;
+    border-bottom:1px solid #d6d6d6;
+}
+.footer-copyright {
+    font-size:0.75em;
+    border-top:1px solid #fff;
+    padding:1em 1.5em;
+}
+.footer-copyright .if-laugh{
+    top:0px;
+    margin-left:1em;
+}
+
+.container{
+    max-width: 1200px;
+    margin:0 auto;
+    padding-left:15px;
+    padding-right:15px;
+}
+.container:before,
+.container:after {
+  display: table;
+  content: " ";
+}
+
+.container:after {
+  clear: both;
+}
+
+.container:before,
+.container:after {
+  display: table;
+  content: " ";
+}
+
+.container:after {
+  clear: both;
+}
+
+.jumbotron{  
+    background:#fff;    
+}
+
+.jumbotron-alt {        
+    background:#f6f6f6;    
+}
+.discovery-title {
+    font-size:2em;
+    line-height:1em;
+    text-align:center;
+    margin-top:1.5em;
+    margin-bottom:.5em;
+}
+.discovery-title a{
+    color:#474747;
+    text-decoration:none;
+}
+.discovery-title a:hover{
+    color:#474747;
+}
+.discovery-title-minor {
+    font-weight:normal;
+    text-align:center;
+    line-height:1em;
+    margin-bottom:2em;
+}
+.con-discovery .discovery-card{
+    width:100%;height:200px;position:relative;    
+    padding:.5em;
+    display:block;
+}
+.con-discovery .playbill-card{
+    display:none;
+    height:600px;
+}
+.con-discovery .playbill-card-horizontal{
+    height:200px;
+}
+
+.con-discovery .discovery-groud {
+    width:100%;height:100%;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius:4px;
+}
+
+.con-discovery .discovery-groud img{
+    width:100%;
+    height:100%;
+}
+.con-discovery .discovery-card .card-cotent {
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+    text-align:center;
+    font-size:1.2em;
+    color:#fff;
+}
+.con-discovery .discovery-card .card-player {
+    display:block;
+    font-size:3em;
+    line-height:2em;
+    color:rgba(230, 230, 230, 0.80)
+}
+.con-discovery .discovery-card .card-player .if-play{
+    top:10px;
+}
+.con-discovery .discovery-card .card-player:hover,
+.con-discovery .discovery-card .card-player:focus {
+    color:rgba(230, 230, 230, 0.99)
+}
+.con-discovery .card-descript {
+    position:absolute;
+    width:100%;
+    padding:1.5em .5em 1em .5em;
+    bottom:0;
+    color:#fff;
+    font-size:1em;
+    text-shadow:1px 1px 1px rgba(51, 51, 51, 0.65);    
+    background:-moz-linear-gradient(top,#b8c4cb,#f6f6f8);/*火狐*/ 
+    background:linear-gradient(to top,rgba(4, 4, 4, 0.50),transparent);    /* IE 10 */ 
+    z-index:100;     
+}
+.con-discovery .card-descript .card-name {
+    white-space:nowrap;text-overflow:ellipsis;overflow:hidden;
+}
+.con-discovery .card-descript .activity-name {
+    margin:0 0; text-align:center; white-space:nowrap;text-overflow:ellipsis;overflow:hidden;
+}
+
+.con-app {
+    position: relative;
+}
+.con-app-ground {  
+    position:relative;
+    width:100%;  
+    height: 200px;
+    background: #fff;
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: center 0;
+    background-repeat: no-repeat;   
+}
+.con-services {    
+    padding:1em 0;
+    text-align:center;
+}
+.con-services .service-ground{
+    width:100%;height:150px;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius:4px;
+}
+
+.con-services .service-tag{
+    display:block;
+    width:100%;
+    text-align:center;
+    position:absolute;
+    top:25%;
+    font-size:1.1em;    
+}
+.con-services .service-tag:hover {
+    text-decoration:none;
+}
+.con-services i {
+    font-size:3em;   
+}
+.fullscreen-video-player { 
+    opacity:0;    
+    background-color: #000;
+    width: 100%;height: 100%;
+    top: 0;left: 0;
+    position: fixed;           
+    z-index: -1001;
+}
+.fullscreen-video-player video{
+    width:100%;height:100%;max-width:100%;display:inline-block;}
+
+.fullscreen-video-player .video-closer {
+    position:absolute;top:0;right:.5em;color:#fff;opacity:0.55;background:transparent;
+    font-size:3em;text-decoration:none;
+}
+.fullscreen-video-player .video-closer:hover{
+    opacity:0.85;
+}
+/*侧边固定反馈按钮*/
+.sidebar{
+    position:fixed;
+    bottom:60px;
+    right:0em;
+    z-index:3000000;
+}
+.sidebar a{
+    display:block;
+    height:3rem;
+    width:3rem;
+    text-align:center;
+    background:rgba(0,0,0,.5);
+    border-radius:2px;
+    margin-bottom:1px;
+    padding:.6em 0;
+    color:#fff;
+    font-size:.8em;
+    text-decoration:none;
+}
+.sidebar a .if{
+    display:block;
+    color:#fff;
+}
+
+/* 
+ * -- 内页主导航条-- */
+.main-menu {
+    z-index:199;    
+    transition: background 0.5s;
+    background:#fff;
+    font-size:0.75em; 
+    position:relative; 
+    height:57px;  
+}
+
+.pure-menu-fixed{
+    position:fixed!important;
+}
+.pure-menu-horizontal .pure-menu-item{
+    display:inline-block;
+} 
+.main-menu a{    
+    color: #474747;    
+    transition: color 0.5s linear;
+    -webkit-transition: color 0.5s linear;
+    
+}
+.main-menu a.highlight{    
+    color: #ee2c00;    
+    transition: color 0.5s linear;
+}
+.main-menu li a:hover,
+.main-menu li a:focus {
+    color:#ee7500;
+    background:none; 
+    text-decoration:none; 
+}
+
+.main-menu .msg-coming{
+    color:#ee7500;
+}
+
+.main-menu .heading-logo{ 
+    /*padding-right:110px;*/ 
+    margin-left:.8em;          
+    background: url('http://imgs.52mf.com.cn/icon.png?imageMogr2/strip/quality/50/interlace/1') 0 -47px no-repeat;
+    background-size:auto;
+    text-indent:-999px; 
+    padding:.7em 115px 1.3em .7em;
+
+}
+.house-header .main-menu .heading-logo {
+    background: url('/images/temps/house.png') 0 no-repeat;
+    background-size:cover;
+    margin-left:0;
+    margin-top:6px;
+    padding:.7em 135px 1.3em .7em;
+}
+.main-menu .heading-location {
+    margin-top:.5em;
+    position:absolute;
+    left:0;
+}
+.main-menu .pure-menu-children{
+    border:1px solid #b8c4cb;
+    position:relative;     
+}
+.main-menu .pure-menu-children .jiantou{
+    height:10px;
+    width:10px;
+    border-top:1px solid #b8c4cb;
+    border-left:1px solid #b8c4cb;
+    transform-origin:top;
+    -webkit-transform-origin:top;
+    transform:rotate(45deg) translate(-50%,-20%);
+    -webkit-transform:rotate(45deg) translate(-50%,-20%);
+    position:absolute;
+    left:50%;
+    top:0;    
+    background-color:#fff;        
+}
+.main-menu .pure-menu-children li{    
+    font-size:.85em;    
+}
+.main-menu .pure-menu-children li a{    
+    padding:.5em 1.5em;
+}
+.main-menu .pure-menu-children li a:hover{    
+    background:#f9f9f9;
+}
+.main-menu .private-menu {
+    float:right;margin-top:1em;
+}
+.main-menu .user-children{
+    left:1em;
+}
+.private-menu-mobile .pure-menu-children{
+    left:-3em;
+}
+.private-menu-mobile .pure-menu-allow-hover{
+    padding:.5em 1em;
+}
+.private-menu-mobile .pure-menu-children .jiantou{
+
+    transform:rotate(45deg) translate(-8px,2px);
+    left:90%;
+    top:0;          
+}
+
+
+/* 搜索索引页面 */
+.con-search {
+    width:100%;height:100%;
+    position:absolute;
+}
+.con-search .con-grids {    
+    height:100%;
+}
+.con-search .map-wrapper { 
+    position:fixed;  
+	float:left;  
+    width:40%;
+	height:100%;overflow:hidden;      
+}
+.con-search .map-content{ 
+	z-index:0;   
+    padding-top:50px;
+    height:100%;
+    border-right:1px solid #c6c6c6;	
+    box-shadow:rgba(100, 100, 100, 0.30) 1px 0px 0px 0px;
+}
+.con-search .map{  
+    height:100%;
+    width:100%;
+}
+
+.con-search .content {
+	float:right;width:100%;margin-top:3.5em;
+}
+.con-search .content .filter{
+    background:#f6f6f6;
+    padding:1em;
+    font-size:0.75em;
+
+}
+.con-search .filter .condition {
+    padding:0 1em;
+    background:#fff;
+    box-shadow:rgba(100, 100, 100, 0.10) 1px 1px 1px;    
+}
+.con-search .filter .condition-tag{
+    margin-top:1em;
+    padding-top:.5em;padding-bottom:.5em;
+}
+
+.con-search .condition .tag-title {
+   padding:0 0; float:left;
+}
+.con-search .condition .price-title {
+   margin-top:1.6em;
+}
+
+.con-search .condition .condtion-box {
+   width:100%;padding-left:4.3em;
+}
+
+
+.con-search .condition .condtion-box .unit{
+   margin-top:1.7em;
+}
+
+.con-search .filter .tab-head {
+    box-shadow:none;    
+}
+
+.con-search .filter .tab-head li{
+     display: inline-block;
+     margin-right:0;
+     padding:.5em .8em;}
+.con-search .filter .tab-head li.title{
+     background: none;padding:.5em 0;margin-right:1em; color:#646464;
+}
+.con-search .filter .tab-head li a {
+    text-decoration:none;
+}
+.con-search .filter .tab-head li i {
+    color:#ee7500;
+}
+.con-search .filter .tab-head li .if-up {
+    display:none;
+}
+.con-search .filter .tab-head li.active {
+	background:#e5e5e5;
+}
+.con-search .filter .tab-head li.active .if-down{
+    display:none;
+}
+.con-search .filter .tab-head li.active .if-up{
+    display:inline;
+}
+.con-search .filter .tab-content {    
+    
+}
+.con-search .filter .tab-content .tab-page {
+	padding:.5em 1em;
+	background:#e5e5e5;
+	display:none;
+}
+.con-search .filter .tab-content .tab-page.open {	
+	display:block;
+}
+.con-search .filter .tab-content li {
+	cursor:pointer;
+	display:inline-block;padding:.2em .2em .3em .5em;
+	border-radius:3px;margin-right:1em;
+}
+.con-search .filter .tab-content li.active,
+.con-search .filter .tab-content dd.active {
+	background:#ee7500;color:#fff;
+}
+.con-search .filter .tab-content li.active i,
+.con-search .filter .tab-content dd.active i {
+	display:inline-block;
+}
+.con-search .filter .tab-content li i,
+.con-search .filter .tab-content dd i {
+	font-style:normal;padding:0em .4em .1em .3em;margin-left:.2em; cursor:pointer;
+	background:#dc6c00;border-radius:10px;text-align:center;
+	display:none;
+}
+
+.con-search .filter .tab-content .subway li.active {
+	color:#ee7500;
+	background:none;
+}
+.con-search .filter .tab-content .subway {
+	
+}
+.con-search .filter .tab-content .tab-subway dl {
+	border-top:1px dotted #696969;
+	display:none;
+	margin:0;padding:.5em 0 0 0;
+}
+.con-search .filter .tab-content .tab-subway dd {
+	margin:0 1em 0 0;padding:.2em .2em .2em .5em;display:inline-block;cursor:pointer;
+
+}
+.con-search .filter .tab-content .tab-subway dl.hold {
+	display:block;
+}
+
+.con-search .search-btn-list {
+    margin-top:1em;text-align:right;
+}
+/* 搜索结果 */
+.search-results {
+    background:#fff;
+    padding-bottom:.5em;
+}
+
+.search-results .results-head {
+
+}
+.search-results .results-head .results-total {
+    margin:1em 0 1em 1.5em;
+}
+.search-results .orderby{
+    margin:1em 1em .75em 0;
+    font-size:0.85em;
+}
+.search-results .orderby a{
+    text-decoration:none;margin-left:1em;
+}
+.search-results .orderby a:hover,.search-results .orderby a.active{
+    color:#ee7500;
+}
+.search-results .results {    
+    padding:0 .5em;
+
+}
+.search-results .room-container .room-box{
+	width:100%;float:left;	
+}
+
+.search-results .room-card  {
+    display:block;   
+	position:relative;     
+    margin:0 .5em;
+    
+}
+.search-results .room-card .pure-img{
+	border-radius:4px; 
+}
+.search-results .room-card .room-price {
+	position:absolute;bottom:1em;color:#fff;
+	padding:.5em;
+	background:rgba(0, 0, 0, 0.50)
+}
+.search-results .room-card .room-card-ground {
+    width:100%;height:100%;
+    background-color: #ccc;
+    background-size: cover;
+    background-position: center;
+    position: relative;    
+    border-radius:4px; 
+     
+}
+.search-results .room-info {
+    margin:0 .5em 1.5em .5em;
+    height:4.3em;
+}
+.search-results .room-info h3{
+    margin:.5em 0 .2em 0;font-weight:normal;font-size:1em;
+}
+.search-results .room-info h3 a{
+    color:#474747;
+}
+.search-results .room-info p{
+    font-size:0.85em;color:#9c9c9c;
+}
+.search-results .room-info p a{
+    color:#777
+}
+
+.search-results .room-info .if{
+    font-size:1em;top:-2px;
+}
+.con-search .search-footer {   
+	clear:both; 
+    margin:1em 1em;    
+}
+.con-search .search-footer p{
+    margin:.5em 0;
+}
+.con-search .search-copyright {
+    color:#9c9c9c;    
+}
+
+/* -- 搜索地图上的房间 */
+.map-room-box {
+	display:block;
+	text-decoration:none;
+}
+.map-room-box:hover {	
+	text-decoration:none;
+}
+.map-room-box .map-room-img {
+	float:left;margin-right:1em;
+}
+.map-room-box p{
+	line-height:1.4em;
+}
+.map-room-box .map-room-name {
+
+}
+.map-room-box .map-room-price {
+	color:#ef7c0d;
+}
+.map-room-box .map-room-address {
+	font-size:0.9em;
+	color:#696969;
+}
+
+/*分店网点房间搜索页面*/
+
+.con-orgs .user-banner{
+    padding:1.5rem 0;
+    width:100%;  
+    background:url("http://imgs.52mf.com.cn/orgs-bg.JPG?imageView2/1/w/140/h/140") no-repeat center;   
+    background-size:cover;
+}
+.con-orgs .container-left{
+    padding-left:1.7em;
+    padding-right:1.7em;
+    position:relative;
+}
+.con-orgs .user-banner-logo{
+    display:inline-block;
+    width:30px;
+    height:30px;
+    background:url('http://imgs.52mf.com.cn/icon.png?imageMogr2/strip/quality/50/interlace/1') 0px -60px;
+    position:absolute;
+    left:1em;
+    top:1em;
+}
+
+.con-orgs .search-group{
+    text-align:center;
+    z-index:1000;
+}
+.con-orgs .search-group .box-text,.con-orgs .search-group .search-group-btn{
+    height:40px;
+    line-height:40px;
+    font-size:1.2em;
+}
+.user-banner-moble .search-group .search-group-btn{
+    padding-left:.5em;
+    padding-right:.5em;
+}
+.con-orgs .search-group .box-text{
+    width:170px;
+    border:1px solid #e8e8e8;
+    color:#b0b0b0;
+    font-size:1.1em;
+    padding-left:1em;
+}
+.con-orgs .orgs-hd{
+    padding-left:1em;
+    padding-right:1em;    
+    border-top:1px solid  #e8e8e8;
+    border-bottom:1px solid  #e8e8e8;
+}
+.con-orgs .orgs-hd li{
+    padding-top:1em;
+    padding-bottom:1em;
+    margin-right:1.5em;
+    float:left;
+}
+
+.con-orgs .orgs-hd li a{
+    color:#000;
+    text-decoration:none;
+}
+.con-orgs .orgs-hd li a:hover{
+    color:#ee7500;
+}
+.con-orgs .orgs-hd .city{
+    color:#919191;
+}
+.con-orgs .orgs-hd .active a{
+    color:#ee7500;
+}
+.con-orgs .orgs-hd .more{
+    margin-right:0;
+    float:right;
+}
+.con-orgs .orgs-hd .more a{
+    color:#00a3f8;
+}
+
+.con-orgs .orgs-content{
+    padding-bottom:1em;
+    background:#fff;
+    min-height:200px;
+}
+.con-orgs .orgs-room-wrapper{
+    padding:0;
+}
+.con-orgs .orgs-room-wrapper a:hover{
+    color:#474747;
+    text-decoration:none;
+}
+.con-orgs .orgs-room{
+    border:1px solid #e8e8e8;
+    padding:1em;
+    position:relative;
+}
+.con-orgs .orgs-room .address{
+    position:relative;
+    height:3em;
+    overflow : hidden;
+    
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    text-overflow: ellipsis; 
+    margin-bottom:.5em;        
+    }
+.con-orgs .orgs-room .recommend-pic{
+    height:140px;
+    width:140px;
+    background-size:cover;
+    float:left;
+    margin-right:1em;
+}
+.con-orgs .orgs-room p{
+    line-height:1.5em;
+}
+.con-orgs .orgs-room p.room-money{
+    font-size:1.1em;
+    color:#919191;
+}
+.con-orgs .orgs-room p .if-mapicon{
+    font-size:.8em;
+}
+.con-orgs .orgs-room p.room-money strong{
+    color:#ee7500;
+}
+.con-orgs .orgs-room p.room-hd{
+    color:#000;
+    font-size:1.2em;
+    font-weight:bold;
+    line-height:2em;
+    letter-spacing:.1em;
+
+}
+.con-orgs .orgs-room .if-quanjing{
+    font-size:2rem;
+    color:#3a98fc;
+    position:absolute;
+    top:1rem;
+    right:1rem;
+}
+
+
+/*
+ * -- TABLET (AND UP) MEDIA QUERIES --
+ * On tablets and other medium-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+@media (min-width: 48em) {
+    .hide-xs{display:block;}
+    .hide-xs-inline{display:inline;}
+    .hide-xs-inline-block{display:inline-block;} 
+    /* 手机端隐藏 */
+    .show-xs{display:none;}
+    .show-xs-inline{display:none;}
+    .show-xs-inline-block{display:none;}
+
+    .header-home .ad-title {
+        display:block;        
+        font-size:1.8em;letter-spacing:4px; width:100%;color:#fff;text-shadow:1px 1px 1px rgba(0, 0, 0, 0.30);
+        z-index:999;position:absolute;top:40%;text-align:center;font-weight:normal;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;overflow:hidden;
+    }
+          
+    
+    .header-home .search-group {
+        
+    }
+    .header-home .search-group .box-text {
+        width: 500px;        
+    }
+
+    .header-home .search-group .date-text {
+        display:inline;
+    }
+    .city-box{
+        width:500px;
+        margin-left:21px;
+    }
+    .con-discovery .discovery-card{
+        width:100%;height:300px;position:relative;    
+        padding:.5em;
+        display:block;
+    }
+    .con-discovery .playbill-card{
+        display:none;
+        height:600px;
+    }
+    .con-discovery .playbill-card-horizontal{
+        height:300px;
+    }
+    .footer-corp .service-wrapper {
+        margin:0;
+    }
+    
+    .footer-corp .app-way {
+        margin-top:.5em;
+    }
+    .footer-corp .call-to-us{
+        font-size:1.35em;
+        margin-top:-0.15em;    
+        margin-bottom:.1em;
+    }
+    .footer-corp .weichat { 
+        margin-right:0;         
+        padding:0;
+
+    }
+    .footer-copyright {        
+        font-size:1em;
+    }
+    .footer-copyright .icp {
+        text-align:right;
+        margin-top:0;
+    }   
+    .jumbotron{ 
+        padding-bottom:1.3em;
+    }
+
+    /* discovery card*/    
+    .con-discovery .discovery-card{    
+        padding:.5em;
+    }
+    .con-discovery .discovery-groud {
+        border-radius:0;        
+    }    
+    /* 隐藏横向广告 */
+    .con-discovery .playbill-card-horizontal {
+        display:none;
+    }
+    .con-discovery .playbill-card{
+        display:block;
+        height:600px;
+        
+    }
+    .con-app-ground {
+        height: 600px;
+    }
+
+    .con-services {    
+        background:#f6f6f6;    
+        padding:0 0 1.3em 0;
+    }
+    .con-services .service-ground {
+        height:300px;
+    }
+    .con-services .service-tag{ 
+        top:30%;       
+        font-size:1.8em;    
+    }
+    /* 搜索导航栏 */
+    .main-menu {	
+       font-size:1em;       
+    } 
+    .main-menu .pure-menu-children .pure-menu-item{
+        display:block;
+    }  
+    
+    .main-menu .heading-location {        
+        left:10em;
+    }
+    .main-menu .root-link{
+          
+    }
+
+    .con-search .content {
+        margin-top:4em;
+		width:60%;
+    }
+	.search-results .room-container .room-box{
+		width:50%;float:left;
+
+	}
+
+    .search-results .room-card .pure-img {            
+        border-radius:0;      
+    }
+
+    /*分店网点房间搜索页面*/
+    .con-orgs .orgs-room-wrapper{
+        padding:.7em;
+        width:33.3%;
+    }
+    .con-orgs .search-group .box-text{
+        width:400px;
+    }
+    .con-orgs .search-group{
+        text-align:left;
+    }
+    .con-orgs .orgs-hd{
+        background:#fff;
+        margin:1em auto;
+        border:none;
+    }
+    .con-orgs .orgs-hd li{       
+        margin-right:3em;
+    }
+    .con-orgs .orgs-hd li:last-child{
+        margin-right:0;
+    }
+    .con-orgs .orgs-content{
+        padding:1em 0;
+    }
+    .footer-corp .weichat:before,.footer-corp .app:before{
+        font-size:14px;
+    }
+      
+}
+
+/*
+ * -- DESKTOP (AND UP) MEDIA QUERIES --
+ * On desktops and other large devices, we want to over-ride some
+ * of the mobile and tablet styles.
+ */
+@media (min-width: 64em) {
+   .header-home li img{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0,-50%);
+    }
+   .ram-slider ul,.ram-slider li{height:500px;position:relative;}
+
+}  
+
+/*
+ * -- DESKTOP (AND UP) MEDIA QUERIES --
+ * On desktops and other large devices, we want to over-ride some
+ * of the mobile and tablet styles.
+ */
+@media (min-width: 80em) {
+    html{height:100%;}
+    body{font-size:14px;}
+    
+    .ram-slider ul,.ram-slider li{height:560px;}
+    .con-discovery .card-descript {       
+        font-size: 1.2em;
+    }
+    .home-menu a {
+        padding:1.5em .8em;
+    }
+    
+    
+
+    /* 搜索桌面版*/
+    .con-search .content .filter{        
+        font-size:1em;
+    }
+    .con-search .condition .price-title {
+       margin-top:1.3em;
+    }
+    .con-search .condition .condtion-box .unit{
+       margin-top:1.3em;
+    }
+    .search-results .room-card  {      
+    }
+    .search-results .room-info p{
+        font-size:1em;
+    }
+
+    .main-menu .heading-logo{          
+        padding-bottom:1.8em;   
+    }
+    .main-menu .root-link{
+       
+    }
+    .container-app{
+        font-size:16px;
+    }
+    
+}
+
+/* hacks for room's results >1600px */
+@media (min-width:100em) {
+    .header-home li img{
+        position:static;
+        top:0;
+        left: 0;
+        transform: translate(0,0);
+    }
+    .header-home{
+        height:700px;
+    }
+	.search-results .room-container .room-box{
+		width:33%;float:left;
+
+	}
+    .ram-slider{
+        height:100%;
+        max-height:none;
+    }
+}
+
+/* Ion.RangeSlider, Nice Skin
+// css version 2.0.3
+// © Denis Ineshin, 2014    https://github.com/IonDen
+// ===================================================================================================================*/
+
+/* =====================================================================================================================
+// Skin details */
+
+.irs-line-mid,
+.irs-line-left,
+.irs-line-right,
+.irs-bar,
+.irs-bar-edge,
+.irs-slider {
+    background: url('../images/sprite-skin-nice.png') repeat-x;   
+}
+
+.irs {
+    height: 40px;
+}
+.irs-with-grid {
+    height: 60px;
+}
+.irs-line {
+    height: 8px; top: 25px;
+}
+    .irs-line-left {
+        height: 8px;
+        background-position: 0 -30px;
+    }
+    .irs-line-mid {
+        height: 8px;
+        background-position: 0 0;
+    }
+    .irs-line-right {
+        height: 8px;
+        background-position: 100% -30px;
+    }
+
+.irs-bar {
+    height: 8px; top: 25px;
+    background-position: 0 -60px;
+}
+    .irs-bar-edge {
+        top: 25px;
+        height: 8px; width: 11px;
+        background-position: 0 -90px;
+    }
+
+.irs-shadow {
+    height: 1px; top: 34px;
+    background: #000;
+    opacity: 0.15;
+}
+.lt-ie9 .irs-shadow {
+    filter: alpha(opacity=15);
+}
+
+.irs-slider {
+    width: 22px; height: 22px;
+    top: 17px;
+    background-position: 0 -120px;
+    cursor:pointer
+}
+.irs-slider.state_hover, .irs-slider:hover {    
+    background-position: 0 -150px;
+}
+
+.irs-min, .irs-max {
+    color: #999;
+    font-size: 10px; line-height: 1.333;
+    text-shadow: none;
+    top: 0; padding: 1px 3px;
+    background: rgba(0,0,0,0.1);
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.lt-ie9 .irs-min, .lt-ie9 .irs-max {
+    background: #ccc;
+}
+
+.irs-from, .irs-to, .irs-single {
+    color: #fff;
+    font-size: 10px; line-height: 1.333;
+    text-shadow: none;
+    padding: 1px 5px;
+    background: rgba(238, 117, 0, 0.95);
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.lt-ie9 .irs-from, .lt-ie9 .irs-to, .lt-ie9 .irs-single {
+    background: #ee7500;
+}
+
+.irs-grid-pol {
+    background: #99a4ac;
+}
+.irs-grid-text {
+    color: #99a4ac;
+}
+
+.irs-disabled {
+}
+
+
+
+/*房间详情页面-轮播图部分*/
+.room-slider {
+    height: 40em;
+	margin: 0;
+	position: relative;
+	border: none;
+	background-size: cover;
+	background: url('http://imgs.52mf.com.cn/bak_page_blur.jpg?imageMogr2/strip/quality/50/interlace/1') #333;
+	overflow: hidden;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	zoom: 1;
+    z-index:0;
+}
+.room-slider .banner-remind{
+    position:absolute;
+    top:2em;
+    left:50%;
+    transform:translate(-50%);
+    -webkit-transform:translate(-50%);
+    color:rgba(255,255,255,.3);
+    z-index:200;
+}
+.room-slider .flex-control-nav {
+	bottom: 0em;
+	z-index: 99;
+	position: absolute;
+}
+.room-slider .flex-control-nav li {
+	float: none;
+	padding: .5em;
+	width: 8%;
+}
+.room-slider .flex-control-nav img {
+	opacity: 0.5;
+	border: 3px solid rgba(255, 255, 255, 0.35);
+	border-radius: 2px;
+}
+.room-slider .flex-control-nav .flex-active,
+.room-slider .flex-control-nav img:hover {
+	opacity: 1;
+}
+
+/*房间详情页面-房间及价格部分*/
+
+.room-booking-wrapper {	
+	background: #fff;
+}
+.price-box {
+	padding:.7rem 1rem;
+	float: right;
+}
+.room-booking-wrapper .price-box .price {
+	color: #dc143c;
+}
+.room-booking-wrapper .price-box .booking-discount {
+	display: inline;
+}
+.price-box .btn-booking {
+	background: #ee7500;
+	color: #fff;
+	margin-left: 1em;
+	border: none;
+	padding: .5em 1em;
+    border-radius:4px;
+}
+.price-box .btn-more-booking {
+	background: rgb(139,111,75);
+	color: #fff;
+	margin-left: 1em;
+	border: none;
+	padding: .5em 1em;
+    border-radius:4px;
+}
+.price-box .prohibit{
+    color:#9c9c9c;
+    background-color:#e8e8e8;
+}
+.room-booking-wrapper .booking-control {
+	padding:1rem;
+}
+.room-booking-wrapper .room-name {
+	color: #ee7500;
+	font-size: 1.3em;
+}
+.room-booking-wrapper .room-more-name {
+	color: black;
+	font-size: 1.3em;
+}
+
+/*房间详情页面-房间左侧部分*/
+
+.con-room {
+    margin-top:1rem;
+	padding-bottom: 1em;
+}
+.con-room .service-card {
+	margin-bottom:1em;
+}
+.con-room .room-info {
+	background: #e8e8e8;
+}
+.con-room .room-info .org-title{
+    padding: 1rem 1rem .85rem 1rem;
+	font-size: 1.2em;
+	background: #e8e8e8;
+    color:#000;
+    height:60px;
+}
+.con-room .service-card .org-title .if {
+	top: 1px;
+    margin-right:.5em;
+    color:#474747;
+    font-size:1.5em;
+}
+.con-room .service-card .org-title .if-near{
+    top:-2px;
+}
+.con-room .service-card .org-title span{
+    position:relative;
+    top:-2px;
+}
+.con-room .room-description {
+	background: #fff;
+	padding: 1em 1em;
+}
+.con-room .room-map .room-description{
+    padding:0;
+}
+.con-room .room-description pre {
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	word-break: break-all;
+	margin: 0;
+	line-height: 1.5em;
+	overflow: hidden;
+}
+.con-room .service-card .card-title-ground {
+	background: #e8e8e8;
+}
+.con-room .card-content .remind {
+    color: #9c9c9c;
+}
+.con-room .service-card .card-title {
+	padding: 3em;
+	text-align: center;
+}
+.con-room .service-card .card-content-ground {
+	position: relative;
+	background: #fff;
+}
+.con-room .service-card .card-traffic pre {
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	word-break: break-all;
+	font-size: 0.9em;
+	line-height: 1.5em;
+}
+.con-room .service-card .card-traffic .if {
+	top: 1px;
+	margin-right: .5em;
+}
+.con-room .room-info .room-org {
+	margin-top: .5em;
+}
+.con-room .room-info .room-org .org-name {
+	margin-right: 1em;
+}
+.con-room .room-info .room-org .if, .con-room .room-info .operate .if {
+	font-size: 1em;
+}
+.con-room .room-info .operate {
+	float: right;
+	margin: .7em 0 0 0;
+}
+.con-room .room-equip .room-description-left{
+    float:left;
+}
+.con-room .room-equip p{
+    line-height:2em;
+}
+.con-room .room-equip p:first-child{
+    margin-bottom:.5em;
+}
+.con-room .room-equip p:last-child{
+    margin-top:1.5em;
+}
+.con-room .room-equip p span{   
+    float:right;color:#999;
+}
+.con-room .room-equip p a{
+    color:#ee7500;
+}
+.con-room .room-equip .room-description-right{
+    float:right;
+}
+.con-room .card-content {
+    position:relative;
+}
+.con-room .card-content del{
+	color:#9c9c9c;
+}
+.con-room .card-content ul li {	
+	display: inline-block;
+	width: 32%;
+	overflow: hidden;
+	white-space: nowrap;
+    margin-bottom:1em;
+}
+.con-room .card-content ul p .if {
+	font-size: 1.1em;
+	color: #3494f8;
+}
+.con-room .card-more {	
+	color: #dc143c;
+	cursor: pointer;
+}
+.con-room .card-more i {
+	position: relative;
+	top: 0px;
+}
+.con-room .address-map {
+    height: 40em;
+}
+
+/*房间详情页面-房间右侧部分*/
+
+/*全景看房*/
+.con-room  .panorama{  
+    text-decoration:none;
+    display:block;
+    height:60px;  
+    text-align:center;
+    margin-left:1rem;
+    padding: 1rem 1rem .85rem 1rem;
+    font-size: 1.2em;
+    background: #3a98fc;
+    color: #fff;
+    margin-bottom:1rem;
+}
+.con-room  .panorama span{
+    position:relative;
+    padding-left:3rem;
+}
+.con-room  .panorama .if-quanjing{
+    font-size:2.3rem;
+    position:absolute;
+    left:0;
+    top:-.4rem;
+}
+/*门店信息*/
+.con-room .org-card {
+	margin-left: 1rem;
+}
+.con-room .org-title .if-hotflag{
+    top:.2rem;
+}
+.con-room .org-card .org-title,
+.con-fail .org-card .org-title,
+.con-room .choose-title{
+    padding: 1rem 1rem .85rem 1rem;
+	font-size: 1.2em;
+	background: #e8e8e8; 
+    height:60px; 
+}
+.con-room .org-card .org-description {
+	background: #fff;
+	padding: 0 1.5em 1.5em 1.5em;
+}
+.con-room .org-card .org-name {
+	margin: 0;
+	font-size: 1em;
+}
+.con-room .org-card .org-content {
+	font-size: 0.85em;
+	margin-top: .5em;
+	margin-bottom: .5em;
+}
+.con-room .org-card .org-footer {
+	font-size: 0.85em;
+}
+.con-room .choose-wrapper {
+	margin-top: 1.5em;
+    margin-left: 1em;
+}
+.con-room .choose-card .photo-ground,
+.con-room .org-card .photo-ground {
+	padding: 1.5em 1.5em 1em 1.5em;
+    background: #fff;
+}
+.con-room .choose-card .photo,
+.con-room .org-card .photo,
+.con-fail .org-card .recommend-pic {
+	position: relative;
+	width: 100%;
+	height: 18em;
+	background-color: #fff;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	border-radius: 0;
+}
+/*店长推荐*/
+.con-room .choose-card{
+    background-color:#fff;
+}
+.con-room .choose-card .price {
+	position: absolute;
+	bottom: 1em;
+	padding: .3em .5em;
+	color: #fff;
+	background: rgba(0, 0, 0, 0.5);
+}
+.con-room .choose-card .price abbr {
+	color: #cfcfcf;
+	border-left: 1px solid #999;
+	padding-left: 4px;
+	margin-left: 4px;
+	border-bottom: none;
+}
+.con-room .choose-card .price .if {
+	top: 1px;
+}
+.con-room .choose-card .name {
+	margin: 0;
+	padding: 0 1.8em;
+}
+.con-room .choose-card .org-name {
+	padding-right: 1.5em;
+}
+.con-room .choose-card .address {
+	font-size: 0.85em;
+	color: #808080;
+	margin: 0;
+	padding: .5em 1.8em 1.5em 1.8em;
+}
+
+/* 日历组件样式修正 */
+.laydate_box * {
+	box-sizing: content-box;
+}
+
+/* -- 房间预订页面 -- */
+
+.booking-wrapper .process-bar {
+	position: relative;
+	margin: 3em auto;
+    display:block;
+}
+.booking-wrapper .process-bar i {
+	border: 5px solid #1985e8;
+	border-radius: 5px;
+	display: block;
+	line-height: 0;
+	height: 5px;
+	width: 5px;
+	position: relative;
+	top: 25px;
+	margin: 0 auto;
+}
+.booking-wrapper .process-bar i.undo {
+	border-color: #babac2;
+}
+.booking-wrapper .process-bar .process-step {
+	color: #0065b9;
+	text-align: center;
+}
+.booking-wrapper .process-bar .process-step span {
+	background: url('http://imgs.52mf.com.cn/icon.png?imageMogr2/strip/quality/50/interlace/1') 0 -192px no-repeat;
+	display: block;
+	margin: 0 auto 5px auto;
+	width: 60px;
+	height: 60px;
+	font-size: 2em;
+	padding-top: 10px;
+}
+.booking-wrapper .process-bar .undo {
+	color: #999;
+}
+.booking-wrapper .process-bar .undo span {
+	background: url('http://imgs.52mf.com.cn/icon.png?imageMogr2/strip/quality/50/interlace/1') -95px -192px no-repeat;
+}
+.booking-wrapper .form-wrapper {
+	background: #fff;
+	height: 100%;
+	padding-bottom:3em;   
+    margin-right: 1em;
+}
+.booking-wrapper .room-information{
+    margin-bottom:2em;
+}
+.booking-wrapper .room-information .font-color{
+    color:#898989;
+}
+.booking-wrapper .booking-content {
+	padding: 0.5em 1.5em 1.5em 1.5em;
+	margin-bottom: 0;
+    border-bottom:1px dashed rgba(204, 204, 204, 0.55)
+}
+.booking-wrapper .booking-title {
+	font-size: 1.5em;
+	background: #e2e2e2;
+	padding: .5em 1em;
+}
+.booking-wrapper .booking-title i {
+	font-size: 1em;
+	margin-right: .5em;
+}
+.booking-wrapper .room-info-layer{
+	background:#fff;
+}
+.booking-wrapper .room-info .room-card {
+	padding: 1.5em;
+	background: #fff;
+}
+.booking-wrapper .room-info .summary-title {
+	font-size: 1.5em;
+	background: #e2e2e2;
+	padding: .5em 1em;
+}
+.booking-wrapper .room-info .room-card h2 {
+	font-size: 1.1em;
+	font-weight: normal;
+	margin-bottom: 0;
+}
+.booking-wrapper .room-info .room-card h3,
+.booking-wrapper .room-info .room-card h4 {
+	margin:.5em 0;
+	color: #666;
+	font-size: 1em;
+	font-weight: normal;
+}
+.booking-wrapper .booking-content p {
+	margin: .5em 0;
+}
+.booking-wrapper .booking-content .persons label {
+	display: block;	
+}
+.booking-wrapper .booking-content .btn-add {
+	border: none;
+	background: none;
+	margin: 0;
+	padding: 0;
+	color: #3494f8;
+}
+.booking-wrapper .booking-content .btn-add i {
+	top: 2px;
+}
+.booking-wrapper .booking-content button[disabled] {
+	color: #999;
+}
+.booking-wrapper .booking-submit{
+	background:#fff;
+	padding:0 1.5em 1.5em 1.5em;
+}
+.booking-wrapper .booking-date .row {
+	padding-top: 1em;
+}
+.booking-wrapper .form-title {
+	position: relative;
+	top: .5em;
+	color:#898989;
+}
+.booking-wrapper .form-title-paymethod {
+	top: 1em;
+}
+.booking-wrapper .booking-date .control-group input,
+.booking-wrapper .booking-date .control-group select {
+	width: 20em;
+    margin-top: 0;
+}
+.booking-wrapper .booking-date .control-group .text-message {
+	width: 30em;
+}
+.booking-wrapper .pay-type-box {
+}
+.booking-wrapper .pay-type {
+	margin-top: .7em;
+}
+.booking-wrapper .pay-type label {
+	margin-right: 1em;
+}
+.booking-wrapper .pay-description {
+	width: 75%;
+	color: #696969;
+	margin: 1em 0;
+	font-size: .85em;
+	background: #f5f5f5;
+	padding: .5em 1.5em;
+}
+.booking-wrapper .pay-type .table-price {
+	border-left: none;
+	border-right: none;
+	width: 75%;
+	border-color: #eee;
+}
+.booking-wrapper .pay-type .table-price th {
+	border-color: #eee;
+	border-right: 1px solid #eee;
+	text-align: left;
+	font-weight: normal;
+}
+.booking-wrapper .pay-type .table-price td {
+	text-align: right;
+	padding-right: 2em;
+	border-color: #eee;
+}
+.booking-wrapper .price-rule {
+	opacity: 0;
+	height: 0;
+}
+.booking-wrapper .pay-method-row {
+	margin-top: 2em;
+}
+.booking-wrapper .pay-method-row .btn-group {
+	margin-top: 1em;
+}
+.booking-wrapper .pay-method label {
+	margin-right: 2em;
+}
+.booking-wrapper .pay-license {
+	padding: .5em 0;	
+	color:#969696;
+}
+.booking-wrapper .pay-license a{
+	color:#969696;
+}
+.booking-wrapper .pay-method {
+	margin-top: .7em;
+}
+.booking-wrapper .pay-method i {
+	margin: 0 .2em;
+}
+.booking-wrapper .btn-group .pay-item {
+	margin-right: 2em;
+}
+.booking-wrapper .select-rooms {
+	padding: .5em 0 0 0;
+}
+.booking-wrapper .select-rooms .rooms abbr {
+	border: 1px solid #3494f8;
+	color: #696969;
+	padding: .2em .5em;
+	border-radius: 3px;
+	margin-right: 1em;
+}
+.booking-wrapper .content-wrapper{
+    margin-bottom:3em;
+    
+}
+/* 支付页面 */
+.con-pay {
+    text-align:center;
+    border-bottom:2px dashed #e8e8e8;
+}
+.con-pay .pay-title {
+    font-size:1.714rem;
+    color:#7ed321;
+    font-weight:normal;
+    margin:3rem 0;
+}
+.con-pay p{
+   background-color:#fff;
+   color:red;
+   padding:1rem;
+   border:1px solid red; 
+   border-radius:5px;
+}
+.guided-code .app,.guided-code .WeChat{
+    display:inline-block;
+    width:130px;
+    margin:2rem;
+}
+.con-pay-detail{
+    padding:2rem 0;
+}
+.con-pay-detail .order-rows li {
+	margin-bottom: .5em;
+}
+.con-pay-detail .order-rows label {
+	float: left;
+	width: 6em;
+	color: #969696;
+}
+
+/*订单提交失败页面页面*/
+.con-fail .org-card .recommend-pic{
+    height:8em;
+    border-radius:0;
+    margin-bottom:.8em;
+ }
+.con-fail-mobile{
+    background-color:#f2dede;
+    border:1px solid  #ebccd1;
+    margin-top:1.43em;
+    margin-bottom:1.43em;
+    position:relative;
+}
+.fail-midle{
+    display:inline-block;
+    margin:3.5em 0;
+    position:relative;
+    left:50%;
+    transform:translate(-50%);
+    z-index:100;
+}
+.if-gantanhao,.if-chenggong{
+    font-size:100px;
+    color:#a94442;
+    top:-.05em;
+    left:0;
+    margin-left:0;
+    margin-right:.2em;
+    z-index:100;
+ }
+.fail-midle-font{
+    margin:1em 0;
+    display:inline-block;
+    text-align:left;
+}
+.fail-midle a{
+    color:#3a98fc;
+}
+.fail-midle  h2{
+    margin:0;
+    color:#a94442;
+    font-size:1.714em;
+}
+.fail-midle  p{
+    line-height:2em;
+} 
+.con-fail .org-card .org-title{
+    padding:1.7em 2.3em;
+}
+.con-fail .org-card{
+    margin-bottom:1.43em;
+}
+.con-fail .choose-card{
+    background-color:#fff;
+    padding:2.5em 1.5em 0;
+}
+.con-fail .fail-recommend{
+    padding:0 .8em 2em .8em;
+}
+.fail-recommend p{
+     line-height:1.8em;
+}
+.fail-recommend strong a:hover{
+    color:#1b1b1b;
+}
+
+/*订单提交成功页面*/
+
+.success-content .pay-type .table-price{
+    width:80%;
+}
+.con-success-mobile{
+    background-color:#f9fdfe;
+    border:1px solid #aad3ff;
+}
+.if-chenggong,.success-midle-font h2,.fail-midle-font span{
+    color:#3a98fc;
+}
+.fail-midle-font em{
+    color:#ee7500;
+    font-style:normal;
+}
+.con-success .if-chenggong{
+    font-size:110px;
+    margin-right:.1em;
+}
+.success-content{
+    background:#fff;
+    padding:0 3em 4em; 
+    margin-bottom:2em;
+}
+.success-content h3{
+    color:#ee7500;
+    font-size:1.8em;
+    font-weight:normal;
+    padding:1.5em 0;
+    border-bottom:1px solid #e8e8e8;
+}
+.success-content .pay-type，
+.detail-content .pay-type{
+    margin-top:0;
+}
+.success-content .table-price th{
+    padding-left:.5em;
+}
+.success-content .booking-wrapper .pay-type .table-price td{
+    padding-right:.5em;
+}
+.success-content .booking-wrapper .pay-type .table-price{
+    margin-top:1.87em;
+}
+.success-content .explain,
+.detail-content .explain{
+    margin-top:1.4em;
+    width:100%;
+    height:14em;
+    border:1px solid #e8e8e8;
+    padding:1.5em 2.5em;
+}
+.success-content .explain del,
+.detail-content .explain del{
+    margin-right:4em;
+}
+.success-content .btn-primary{
+    background-color:#3a98fc;
+    margin-top:0em;
+}
+
+/*订单详情页面*/
+.con-detail a {
+    color: #3a98fc;
+}
+.detail-content .pay-type .table-price{
+    width:85%;
+}
+.con-detail .detail-title{
+    font-size:1.3em;
+    background-color:#e8e8e8;
+    line-height:4em;
+    padding-left:80px;
+}
+.con-detail .detail-content{
+    background-color:#fff;
+    padding:30px 80px 100px;
+    margin-bottom:2em;
+}
+.con-detail .detail-introduced{
+    margin-bottom:3em;
+    position:relative;
+}
+.con-detail .detail-orders{
+    border:1px solid #94cefe;
+    padding:1.5em 2em;
+    position:relative;
+}
+.con-detail .detail-message{
+    margin-bottom:2em;
+    margin-top:2em;   
+}
+.con-detail .detail-message h3{
+    text-align:left;
+    padding-left:80px;
+}
+.con-detail .detail-orders p{
+    line-height:1.9em;
+}
+.con-detail .detail-orders span{
+    position:absolute;
+    right:2em;
+    top:50%;
+    text-align:center;
+    transform:translate(0,-50%);
+    -webkit-transform:translate(0,-50%);
+}
+.con-detail .detail-orders span a{
+    display:block;
+    margin:1em 0;
+}
+.orange{
+    color:#ee7500;
+}
+.con-detail .app-download{
+    float:right;
+}
+.con-detail .app-download .download-btn,.con-pay .app-download .download-btn{
+    float:left;
+    margin-right:2.5em;
+    margin-top:1em;
+}
+.con-detail .app-download .code{
+    float:left;
+    height:150px;
+    width:150px;
+}
+.app-download .code img{
+    width:100%;
+    height:100%;
+}
+.app-download .download{
+    display:block;
+    background-color:#f5f5f5;
+    border-radius:5px;
+    padding:2px 10px; 
+    height:45px;
+    width:120px; 
+    margin:0 auto; 
+    color:#1e2248; 
+    margin-bottom:1.7em;
+}
+.app-download .download:hover{
+    background-color:#e8e8e8;
+    text-decoration:none;
+}
+.app-download .download a{
+    width:100%;
+    height:100%;
+}
+.app-download .download span{
+    font-size:10px;
+}
+.app-download .download p{
+    font-size:12px;
+}
+.app-download .download .if-ios,.app-download .download .if-android{
+    font-size:26px;
+    float:left;
+    margin-top:4px;
+    margin-right:12px;
+}
+.detail-content .detail-prepare{
+    border-top:1px dashed #e8e8e8;
+    margin-top:1.43em;
+}
+.detail-content .chage-btn{
+     margin-left:2em;
+ }
+.detail-content .if-checkyes,.detail-content .if-checkno{
+    font-size:1.5em;
+    position:relative;
+    top:.2em;
+    color:red;
+    margin-left:.3em;
+    cursor:pointer;
+}
+.detail-content .if-checkyes{
+    color:#3a98fc;
+    margin-left:.5em;
+}
+.detail-prepare .prepare-hd{
+    line-height:3.3em;
+}
+.detail-prepare .pure-table thead th{
+    font-weight:normal;
+}
+.detail-prepare .pure-table-even{
+    background-color:#f8f8f8;
+}
+.detail-prepare .pure-table-odd{
+    background-color:#f1f1f1;
+} 
+.detail-prepare .booking-wrapper{
+    background-color:#fff;
+}
+.booking-radio .pay-type label{
+    margin-right:3em;
+}
+.detail-prepare .booking-radio,.detail-prepare .pay-orders table th{
+    padding-left:2em;
+}
+.detail-prepare .pay-orders table td{
+    padding-right:2em;
+}
+.detail-prepare .booking-wrapper .pay-type .table-price{
+    border-top:1px solid #e8e8e8;
+} 
+.detail-prepare .type-right{
+    text-align:right;
+}
+.booking-radio .type-right label{
+    margin-right:0em;
+}
+.detail-prepare .pay-money{
+    margin-top:1.4em;
+}
+.detail-prepare .pure-table thead{
+    background-color:#fff;
+    border-bottom:2px solid #f1f1f1;
+} 
+.detail-prepare .pure-table tbody tr{
+    border-bottom:1px solid #f8f8f8;
+}
+.detail-content .btn-primary{
+    background-color:#3a98fc;
+}
+.detail-content .table-left{
+    text-align:left;
+    padding-left:2em;
+}
+
+ /* -- TABLET (AND UP) MEDIA QUERIES --
+ * On tablets and other medium-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+@media (min-width: 48em) {
+
+    .con-pay .price{
+        font-weight:bold;
+        font-size:1.5em;
+    }
+	.con-room .service-card .card-title span {
+		display: block;
+	}
+	.con-room .service-card .card-title .if {
+		font-size: 2em;
+		margin-bottom: .1em;
+	}
+	.con-room .service-card .card-traffic p {
+		margin-left: 2.3em;
+	}	 	
+	.booking-wrapper .booking-person {
+		padding-top:1em;
+	}		
+	.booking-wrapper .booking-pay {
+		margin-bottom: 0;
+		border-bottom:none;
+	}    
+    .con-pay-border{
+        border-bottom:1px dashed #e8e8e8;
+        margin-top:2em;
+    }
+	.con-pay .pay-info {
+		font-size: 1em;
+	}
+  
+}
+
+.con-reg{
+	position:relative;
+	height:100%;
+	min-height:700px;
+	padding-top: 0;
+	background: #ebe7dc url('/images/loginback.jpg') center no-repeat;
+    overflow:hidden;
+	background-size: cover;
+}
+.con-reg .login-layer{
+    width:100%;
+	max-width:880px;
+	margin:0 auto 0 auto;		
+	position:relative;
+    
+}
+
+.con-reg .logo-wrapper {    
+	position:absolute;
+	top:95px;
+    display:none;
+}
+.con-reg .logo-wrapper .logo {
+    display: inline-block;
+    height: 60px;
+    padding-right: 218px;
+    font-size: 0;
+    line-height: 0;
+    background: url('http://imgs.52mf.com.cn/icon.png?imageMogr2/strip/quality/50/interlace/1') 0 -110px no-repeat;
+}
+.con-reg .form-wrapper {
+	position:absolute;
+	right:50%;
+    transform:translate(50%);
+    background: rgba(0, 0, 0, 0.55);
+    display: inline-block;
+    padding: 1.2em 2em;
+}
+
+.con-reg .form-wrapper .title {
+    font-size: 1.2em;
+    color: #f4f2f5;
+	margin-top:0;
+    margin-bottom: 1em;
+	font-weight:normal;
+	border-bottom:1px solid rgba(166, 166, 166, 0.80);
+	padding-bottom:.2em;
+}
+
+.con-reg .form-wrapper .ctrl-group {
+    position: relative;
+    margin: 1.5em 0;
+}
+
+.con-reg .form-wrapper .ctrl-group label{
+	display:block;color:#dfdfdf;font-weight:normal;margin-bottom:.5em;
+}
+
+.con-reg .form-wrapper .ctrl-group .form-control {
+    padding: .6em 0.6em .6em 2em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 3px;
+    vertical-align: middle;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 20em;
+}
+.con-reg .reg-layer .ctrl-group .form-control{
+	padding-left:0.6em;
+}
+.con-reg .form-wrapper .ctrl-group .input-parity-code{
+	width:11em;
+}
+.con-reg .form-wrapper .ctrl-group .btn-parity-code{
+	padding-top:.7em;padding-bottom:.7em;
+	width:8.7em;
+}
+
+.con-reg .form-wrapper .ctrl-group .form-control:focus {
+    outline: 0;
+    border-color: #ff6a00;
+}
+
+.con-reg .form-wrapper .ctrl-group #Password::-ms-clear { display: none; }
+.con-reg .form-wrapper .ctrl-group #Password::-ms-reveal { display: none; }
+    
+.con-reg .form-wrapper .ctrl-group .ctrl-tip {    
+    color: #808080;position:absolute;
+    left: .5em;
+    top: .6em;
+}
+.con-reg .form-wrapper .ctrl-group .show-pw{
+	position:absolute;right:.5em;bottom:.6em;
+	font-style:normal;cursor:pointer;
+	color:#b07b37;
+}
+.con-reg .form-wrapper .reg-full-btn{
+    margin-bottom:1.5em;
+}
+.con-reg .form-wrapper .reg-full-btn .pure-button{
+    width:100%;
+    padding-top:0.8em;padding-bottom:0.8em;
+}
+.con-reg .form-wrapper .setting-info{
+	color:#fff;
+}
+.con-reg .form-wrapper .setting-info a{
+    color:#fff;
+}
+.con-reg .form-wrapper .setting-info .float-right{
+    float:right;
+}
+.con-reg .form-wrapper .setting-info .if-ask{
+    top:1px;
+}
+.con-reg .form-wrapper .reg-alert{
+	border:1px solid rgba(254, 146, 14, 0.70);
+	border-radius:3px;padding:.5em;
+	color:#fe920e;
+	font-size:0.85em;
+	margin-bottom:1.5em;
+}
+.con-reg .footer-layer { 
+	position:absolute;
+	bottom:5%;
+    color:#fff;    
+    text-align: center;
+    width: 100%;
+    text-shadow:1px 1px 1px rgba(102, 102, 102, 0.50);    
+}
+.con-reg .footer-layer .product-list {
+    display:none;    
+}
+.con-reg .footer-layer .product-list li{
+    display:inline-block;
+    text-align:center;
+    padding:1em;
+    position:relative;
+}
+.con-reg .footer-layer .product-list .webchat img{
+    position:absolute;
+    top:-150px;
+    left:-35px;
+    z-index:9999;
+    display:none;
+}
+.con-reg .footer-layer .product-list .webchat:hover img{
+    display:block;
+}
+.con-reg .footer-layer .product-list li a{
+	
+    color:#fff;text-decoration:none;display:block;
+}
+.con-reg .footer-layer .product-list i{
+    font-size:1.8em;
+	padding-bottom:5px;
+}
+.con-reg .footer-layer .product-list p{
+	font-size:0.8em;
+}
+.con-reg .footer-layer .login-link {
+     font-size:0.85em;
+     margin-bottom:.5em;
+}
+.con-reg .footer-layer .login-link a{
+    color:#fff;       
+}
+.con-reg .footer-layer .login-copy{
+    font-size:0.75em;    
+}
+.con-reg .reg-footer {
+	bottom:1em;
+}
+/*找回密码界面*/
+.con-findpwd{
+    text-align:center;
+}
+.con-findpwd .con-reg{
+    background:none;
+    background-color:#fff;
+}
+.con-findpwd .con-reg .booking-wrapper,.con-findpwd .con-reg .footer-layer{
+    background-color:#f6f6f6;
+}
+.con-findpwd .con-reg .footer-layer{
+    position:static;
+}
+.con-findpwd .con-reg .footer-layer{
+    padding:2em 0em;
+    bottom:0;
+}
+.con-findpwd .reg-layer .form-wrapper {
+	background:none;
+    top:25px;
+}
+.con-findpwd .form-wrapper label{
+    text-align:left;
+}
+.con-findpwd .con-reg .footer-layer p,
+.con-findpwd .con-reg .login-link a,
+.con-findpwd .con-reg .footer-layer .product-list li a  {
+    color:#696969;
+}
+.con-ResetPassword .reg-layer .form-wrapper{
+    top:0;
+}
+.con-reset-success p.ctrl-group{
+    text-align:left;
+}
+.con-reset-success p.align-width{
+    padding-left:35px;
+}
+/*意见反馈界面*/
+
+.feedback-con .pure-form{
+    margin:0 auto;
+    width:100%;
+    padding:3em;
+}
+.feedback-con .pure-form .hd{
+    margin-top:0;
+}
+.feedback-con .pure-form .pure-controls{
+    margin:.8em 0;
+}
+.feedback-con .pure-form .title{
+    margin-bottom:0;
+}
+.feedback-con .pure-form .pure-controls label{
+    margin:0;
+}
+.feedback-con .pure-form textarea{
+    width:100%;
+    resize:none;
+}
+.feedback-con .feedback-success{
+    text-align:center;
+    width:50%;
+    margin:4em auto;
+}
+/*
+ * -- TABLET (AND UP) MEDIA QUERIES --
+ * On tablets and other medium-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+@media (min-width: 48em) {
+    .con-reg .logo-wrapper {    
+        display:block;
+    }
+    .con-reg .form-wrapper {
+        top:150px;
+	    right:0;
+        transform:translate(0);
+        z-index:100;
+    }
+    .con-reg .reg-layer .form-wrapper{
+        top:80px;
+    }
+    .con-reg .footer-layer .product-list{
+        display:block;
+    }
+    .con-findpwd .reg-layer .form-wrapper {
+	    position:static;
+    }
+    .feedback-con .pure-form{
+        width:50%;
+        box-shadow: 1px 0 5px rgba(51, 52, 52, 0.80);
+        margin-top:4em;
+        margin-bottom:4em;
+    }
+    
+}
+/*
+ * -- Larger Tablet  --
+ * @media screen and (min-width: 64em)	≥ 1024px
+ */
+@media (min-width: 64em) {
+}
+/*
+ * -- DESKTOP (AND UP) MEDIA QUERIES --
+ * On desktops and other large devices, we want to over-ride some
+ * of the mobile and tablet styles.
+ */
+@media (min-width: 80em) {
+}
+
+/*首页已经所有订单页面的样式*/
+.content-user a{
+    color:#3a98fc;
+}
+.content-user{
+    margin-top:1.5rem;
+    margin-bottom:1.5rem;
+}
+.user-nav{
+    background-color:#474747;
+}
+.user-nav li{
+    float:left;
+    margin-right:3rem;
+}
+.user-nav li a{
+    color:#ababab;
+    padding:1rem 0;
+    display:inline-block;    
+}
+.user-nav li a.active{
+    color:#fff;
+    border-bottom:2px solid #ee7500;
+}
+.user-nav li a:hover{
+    color:#fff;
+}
+.user-index .user-imformation{
+    background-color:#fff; 
+    border:1px solid #e8e8e8;
+}
+.user-imformation .user-pic{
+	height:auto;
+	width:100%;
+	display:inline-block;
+}
+.user-imformation .user-pic img{
+    width:100%;
+}
+.user-imformation .imformation{
+    padding:.5rem 1.5rem;
+}
+.user-imformation p{
+    color:#000;
+    line-height:30px;
+}
+.user-imformation p span{
+    color:#474747;
+    width:35%;
+    display:inline-block;
+} 
+.user-imformation .edit{
+    display:inline-block;
+    width:100%;
+    text-align:center;
+    color:#474747;
+    padding:.5rem 0;
+    margin-top:1rem;
+    border:1px solid #e8e8e8;
+    border-radius:5px;
+    text-decoration:none;
+}
+.user-imformation .edit:hover{
+    color:#fff;
+    background-color:#3a98fc;
+}
+.user-content{
+	margin-left:1.5rem;
+    background:#fff;
+    border:1px solid #e8e8e8;
+    min-height:300px;
+}
+.user-content .content-hd{
+	padding:1rem 1.3rem;
+	border-bottom:1px solid #e8e8e8;
+    margin:0;
+    background-color:#f6f6f6;
+}
+.user-content .order{
+	padding:0 1.3rem;
+}
+.order-imformation{
+	border-bottom:1px solid #e8e8e8;
+	padding:1.3rem 0;
+    position:relative;
+}
+.order:last-child .order-imformation{
+    border-bottom:none;
+}
+.order-imformation img{
+	margin-right:1.3rem;
+	float:left;
+}
+.order-imformation .imformation-font{
+	float:left;
+}
+.order-imformation .imformation-font p{
+    line-height:25px;
+}
+.order-imformation .imformation-font p em{
+    color:#000;
+    font-style:normal;
+    font-weight:500;
+}
+.order-imformation .imformation-font p span{
+    margin-left:2rem;
+}
+.order-imformation .cancel,.order-imformation .detail,.order-imformation .booking{
+    position:absolute;
+    right:0;
+    color:#ee7500;
+    border:1px solid #e8e8e8;
+    border-radius:5px;
+    padding:.5em 1em;
+    text-decoration:none;
+}
+.order-imformation a.booking{
+    top:50%;
+    transform:translate(0,-50%);
+    -webkit-transform:translate(0,-50%);
+}
+.order-imformation a.cancel{
+    bottom:1.3rem;
+    color:#474747;    
+}
+.content-user .nav-left li a{
+    display:inline-block;
+    width:100%;
+    padding-bottom:1rem;
+    color:#a8a8aa; 
+    font-size:1.2em;
+}
+.content-user .nav-left .active a{
+    color:#474747;
+    font-weight:bold;
+}
+/*用户中心首页-弹框*/
+.alert-bg{
+    position:fixed;
+    top:0;
+    left:0;
+    background-color:rgba(0,0,0,.5);
+    z-index:1000;
+    width:100%;
+    height:100%;
+    display:none;
+}
+.alert{
+    background-color:#fff;
+    position:absolute;
+    width:700px;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+.alert .hd{
+    background-color:#f6f6f6;
+    margin:0;
+    padding:1rem;
+    position:relative;
+}
+.alert .hd h3{
+    margin:0;
+}
+.alert .hd button{
+    position:absolute;
+    right:1rem;
+    top:.5rem;
+    background-color:#f6f6f6;
+    border:none;
+    font-size:1.5rem;
+    padding:0;
+}
+.alert p{
+    padding:1rem;
+    color:#ee7500;   
+}
+.alert .guided-code{
+    text-align:center;
+    margin-bottom:1rem;
+}
+
+/*管理常住人样式*/
+.user-guests .nav-left li a{
+    color:#ee7500;
+    border:1px solid #e8e8e8;
+    background-color:#fff;
+    border-radius:5px;
+    text-align:center;
+    padding:.5em 0;
+    cursor:pointer;
+    text-decoration:none;
+}
+.user-guests .nav-left li a .if{
+    font-size:1.2em;
+    margin-right:.5em;
+    top:1px;
+}
+.user-content .user-table{
+    padding:0 1.3rem 1.3rem;
+}
+.user-content .pure-table,.detail-content .pure-table{
+    border:0;
+    width:100%;
+}
+.user-content .pure-table thead{
+    border-bottom:1px solid #e8e8e8;
+    background-color:#fff;
+}
+.content-guests .pure-table-odd td{
+    background-color:#fff;
+}
+.pure-table td,.pure-table th{
+    border-left:0;
+    padding:.7rem 0;
+    text-align:center;
+}
+.user-content .pure-table tbody tr{
+    border-bottom:1px solid #e8e8e8;   
+}
+.user-content .pure-table tbody tr a{
+    border:1px solid #e8e8e8;
+    color:#000;
+    padding:.3em 1em;
+    border-radius:5px;
+    text-decoration:none;
+}
+.user-content .pure-table tbody tr a:hover{
+    color:#fff;
+    background-color:#3a98fc;
+    border:1px solid #3a98fc;
+}
+.user-guests .pure-form{
+    margin-top:2rem;
+    border-top:1px solid #e8e8e8;
+}
+.content-user .pure-form fieldset{
+    padding:1.3rem;
+}
+.content-user .pure-form label{
+    text-align:right;
+    margin:0;
+    padding:.4rem 2rem .4rem 0;
+}
+.pure-form .pure-control-group{
+    margin-bottom:1.3rem;
+}
+.pure-form input[type=text],.pure-form select{
+    box-shadow:none;
+    border:1px solid #e8e8e8;
+    margin-bottom:0;
+    padding:.5rem;
+}
+.pure-form select {
+    height:37px;
+}
+.content-user .pure-control-group p,.content-guests .pure-control-group p{
+    margin-top:.5rem;
+    color:#a8a8aa;
+}
+.content-user .pure-control-group p.phonerror{
+    color:red;
+}
+.custombox-modal-container{
+    width:800px!important;
+}
+.custombox-modal-container .modal-demo{
+    border-radius:0;
+}
+.modal-demo .content-guests{
+    margin:0;
+}
+.modal-demo .content-guests fieldset{
+    padding:1rem 1.3rem;
+}
+.modal-demo .content-guests .cancel{
+    margin-left:1.5rem;
+    background-color:transparent;
+    border:1px solid #e8e8e8;
+}
+/*提示弹框*/
+.user-guests .alert{    
+    position:relative;
+    margin-top:1rem;
+    margin-left:1.5rem;
+}
+.user-guests .alert .btn-close{
+    position:absolute;
+    right:0;
+    background-color:transparent;
+    border:none;
+    margin-top:.6rem;
+}
+.user-guests .message,.feedback-success,.con-detail .message{
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    text-align:center;
+    padding:.8rem 0rem;
+    font-size:1rem;    
+}
+
+/*账户余额样式*/
+.content-account p{
+    display:inline;
+}
+.content-account p span{
+    color:#3a98fc;
+}
+.content-account .btn-primary,
+.detail-content .pure-table .btn-primary{
+    background-color:#3a98fc;
+    padding:0 .6rem .1rem;
+}
+.content-account .btn-primary{
+    margin-left:2rem;
+}
+
+/*通知样式*/
+.content-notification .pure-table th,.content-notification .pure-table td{
+    text-align:left;
+    padding-left:1.3rem;
+}
+.content-notification .pure-table .table-right{
+    text-align:right;
+    padding-right:1.3rem;
+}
+.content-notification .pure-table th.table-right{
+    padding-right:4rem;
+    
+}
+.pure-table-horizontal td,.pure-table-horizontal th{
+    border:0;
+}
+
+
+
+
+/*
+ * -- TABLET (AND UP) MEDIA QUERIES -- ≥ 768px md
+ * On tablets and other medium-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+@media (min-width: 48rem) {
+    /*.user-content .order .order-hd,.user-content .order .order-hd rem,.user-content .order .order-hd span{
+        display:inline-block;
+        line-height:50px;
+    }
+    .menu-link{
+        display:none;
+    }*/
+}
+
+/*
+ * -- Larger Tablet  --
+ * @media screen and (min-width: 64rem)	≥ 1024px lg
+ */
+@media (min-width: 64rem) {	    
+}
+
+/*
+ * -- DESKTOP (AND UP) MEDIA QUERIES -- ≥ 1280 xl
+ * On desktops and other large devices, we want to over-ride some
+ * of the mobile and tablet styles.
+ */
+@media (min-width: 80rem) {
+	
+   
+}
+
+
+
+
+/*banner样式及下边服务等标志样式*/
+.con-org .org-banner {
+    background: url(/images/temps/show-bg.JPG);
+    background-size: cover;
+    height: 18em;
+    text-align: center;
+    margin-bottom:5em;
+}
+.con-org .org-banner h1{
+    color:#fff;
+    display:inline-block;
+    padding: .4em 1em .6em;
+    background-color: rgba(238,117,0,.8);
+    border-radius: 10px;
+    margin-bottom:.5em;
+    margin-top:.5em;
+}
+.con-org .org-banner .phone {
+    font-weight:normal;
+    background-color: rgba(73,144,226,.88);
+    font-size: 1.4rem;
+    color: #fff;
+    padding: 0rem 3rem .6rem;
+    border-radius: 10px;
+    display:inline-block;
+    margin:1rem 0; 
+    text-decoration: none;
+}
+.con-org .org-banner .phone .if-quanjing{
+    font-size:2.3rem;
+    margin-right:.5rem;
+    top:5px;
+}
+.con-org .service-ground{
+    height:100px;
+    margin-bottom:5em;
+}
+.con-org .service-ground .service-tag{
+    top:0;
+}
+.con-org .service-ground {
+    background-color: transparent;
+}
+/*精选房型样式*/
+.con-org .org-room {
+    border-top: 1px solid #e8e8e8;
+    position: relative;
+    padding-top: 5em;
+    margin-bottom:5em;
+}
+.org-room .org-room-bg {
+    background: url('http://imgs.52mf.com.cn/room-lg.gif') no-repeat center;
+    width: 300px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+}
+.con-org .org-room .room-style{
+    margin-bottom:2em;
+}
+.org-room .org-pic {
+    position: relative;
+    background-color: #fff;
+    width:49.9%;
+}
+.con-org .flexslider .slides img{
+    height:300px;
+}
+.con-org .org-room .org-left, .con-org .org-room .org-right {
+    height: 50px;
+    width: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    opacity: .7;
+}
+
+.con-org .org-room .org-left {
+    background: url(/images/org-left.gif);
+    left: 0;
+}
+
+.con-org .org-room .org-right {
+    background: url(/images/org-right.gif);
+    right: 0;
+}
+
+.org-room .org-details {
+    padding: 0 1em;
+    background: #fff;
+    position: relative;
+}
+
+.org-room .org-details h1 {
+    color: #ee7500;
+    margin-bottom: .2em;
+}
+
+.org-room .org-details p {
+    line-height: 2.5em;
+}
+
+.con-org .org-room .flexslider {
+    margin-bottom: 0;
+    border: 0;
+}
+
+.org-room .org-details .room-number li {
+    float: left;
+    margin: .4em .4em .4em 0em;
+}
+.org-room .org-details .room-number li.notices{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+    color:#999;
+    font-size:18px;
+}
+
+.org-room .org-details .room-number li a {
+    color: #3a98fc;
+    text-align: center;
+    display: inline-block;
+    padding: .3em .6em;
+    border: 1px solid #3a98fc;
+    border-radius: 2px;
+}
+
+.org-room .org-details .room-number li a:hover {
+    color: #fff;
+    background: #3a98fc;
+    text-decoration: none;
+}
+
+.org-room .org-details .room-service {
+    position:absolute;
+    bottom:1rem;
+    width:95%;
+}
+#successModal{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    z-index:20000;
+    background-color:rgba(0,0,0,.8);
+}
+iframe{
+    background-color:#fff;
+    position:absolute;
+    left:50%;
+    top:20%;
+    transform:translate(-50%);
+    margin:0 auto;
+    border:none;
+    border-radius:10px;
+    width:400px;
+    height:200px;
+}
+.org-room .flex-direction-nav a:hover {
+    text-decoration: none;
+}
+
+.org-room .org-details .room-service p {
+    display: inline-block;
+    margin-left: .5em;
+}
+
+
+/*房间介绍样式*/
+.con-org .org-room .room-introduce{
+    background:#fff;
+    padding:2em;
+}
+
+
+/*公寓设施样式*/
+.facilities {
+    background-size: cover;
+}
+
+.org-room img {
+    width: 100%;
+    display:block;
+}
+
+.more {
+    cursor: pointer;
+}
+
+
+/*
+ * -- TABLET (AND UP) MEDIA QUERIES -- ≥ 768px md
+ * On tablets and other medium-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+@media (min-width: 48em) {
+    body {
+        font-size: 14px;
+    }
+
+    .con-org .org-banner {
+        height: 35em;
+    }
+
+    .con-org .org-banner h1 {
+        margin-top:4em;
+    }
+
+    .con-org .org-banner p {
+        margin-bottom: 8em;
+    }
+
+    .org-room .org-details .slimScrollDiv{
+        margin-bottom:0em;
+    }
+    .org-room .org-details {
+        padding: 0 3em;
+       
+    }
+
+}
+
+/*
+ * -- Larger Tablet  --
+ * @media screen and (min-width: 64em)	≥ 1024px lg
+ */
+@media (min-width: 64em) {
+}
+
+/*
+ * -- DESKTOP (AND UP) MEDIA QUERIES -- ≥ 1280 xl
+ * On desktops and other large devices, we want to over-ride some
+ * of the mobile and tablet styles.
+ */
+@media (min-width: 80em) {
+}
+
+.selection-con{
+    margin-top:1rem;
+}
+.selection-con dl{
+    background-color:#fff;
+    border-radius:5px;
+    padding-left:1rem;
+    margin:0;
+    margin-bottom:.4rem;
+    position:relative;
+}
+.selection-con dl:last-child{
+    margin-bottom:.8rem;
+}
+ .selection-con dl.last{
+    border-bottom:none;
+    padding-bottom:7px;
+ }
+.selection-con dl.last a{ margin-bottom:0;}
+.selection-con dl dt{
+    float:left;
+    font-weight:bold;
+    padding:.8rem .3rem;
+    margin-left:1rem;
+    width:45px;
+}
+.selection-con dl dd{
+    margin-left:1rem;
+    float:left;
+    position:relative;
+    padding:.5rem 0;
+    width:1076px;
+ }
+.selection-con dl.select-two dd{
+    padding:0;
+}
+.selection-con dl dd a{
+    display:block;
+    float:left;
+    text-decoration:none;
+    padding:.3rem;
+    margin-right:1.5rem;
+    position:relative;
+}
+.selection-con dl dd a .jiantou{
+    position:absolute;
+    display:inline-block;
+    border-left:1px solid #ccc;
+    border-top:1px solid #ccc;
+    height:8px;
+    width:8px;
+    bottom:-10px;
+    left:50%;
+    background-color:#fff;
+    z-index:10;
+    display:none;
+    transform:translate(-50%) rotate(45deg);
+    -ms-transform:translate(-50%) rotate(45deg); 	/* IE 9 */
+    -moz-transform:translate(-50%) rotate(45deg); 	/* Firefox */
+    -webkit-transform:translate(-50%) rotate(45deg); /* Safari 和 Chrome */
+    -o-transform:translate(-50%) rotate(45deg); 	/* Opera */
+}
+.selection-con dl dd a:hover{
+    color:#ee7500;
+}
+
+.selection-con dl dd li:hover .jiantou{
+    display:block;
+}
+.selection-con dl dd a.active{
+    color:#fff;
+    position: relative;
+    background-color:#ee7500;
+    border-radius:5px;
+}
+.selection-con dl dd ul{
+    position:relative;
+    width:100%;
+}
+.selection-con dl dd li {
+    float:left;  
+    padding:.5rem 0; 
+}
+ .selection-con dl dd .filterList li a{
+     margin-right:.8rem;
+ }
+.selection-con dl dd .con{
+    position:absolute;
+    left:0;
+    top:42px;
+    border:solid 1px #ccc;
+    border-radius:10px;
+    background:#fcfcfc;
+    padding:.5rem;
+    font-size:12px;
+    display:none;
+    z-index:1;
+    width:99%;
+}
+.selection-con dl dd .con a{
+    display:inline-block;
+    margin-right:10px;
+    margin-bottom:0;
+    line-height:2rem;
+}
+.selection-con dl dd .con a.active{
+    color:#ee7500;
+    background:#fff;
+}
+/*你已选择样式*/
+
+.house-con{
+    background-color:#fff;
+    border-radius:10px;
+}
+.house-con .title{
+    padding:.5rem 2.3rem;
+    border-bottom:1px solid #f6f6f6;
+}
+.house-con-chose{
+    float:left;
+}
+.house-con-chose b{
+    margin:.5rem 0;
+    display:inline-block;
+}
+.house-con-chose a{
+    margin-left:1.5rem;
+    display:inline-block;
+    border:1px solid #ee7500;
+    border-radius:5px;    
+    color:#ee7500;
+    text-decoration:none;
+}
+.house-con-chose span{
+     padding:.2rem .3rem;
+     border-right:1px solid #ee7500;
+     display:inline-block;
+}
+.house-con-chose a .if-guanbi{
+    top:0px;
+    margin:.1rem .3rem;
+}
+.house-con-chose span.delete{
+    border:none;
+    background-color:#ee7500;
+    color:#fff;
+}
+.house-con-tab{
+    float:right;
+    margin-top:.5rem;
+}
+.house-con-tab a{
+    margin-left:2rem;
+    font-weight:bold;
+    text-decoration:none;
+}
+.house-con-tab a.active{
+    color:#ee7500;
+}
+
+/*列表*/
+.house-list-con{
+    padding:1.8rem;
+    min-height:200px;
+}
+
+.house-list-con ul li{
+    width:33.33%;
+    float:left;
+    padding:.5rem;
+}
+.house-list-con ul li .list{
+    border:1px solid #e8e8e8;
+}
+.house-list-con .list img{
+    width:100%;
+    height:160px;
+}
+.house-list-con .list-detail{
+    text-align:center;
+    padding:1rem 0;
+}
+.house-list-con .list-detail p.price{
+    color:#ee7500;
+    font-size:1.714rem;
+    font-weight:bold;
+}
+.house-list-con .list-detail p.room{
+    font-size:1.28rem;
+    color:#000;
+    margin-top:1rem;
+    height:55px;
+}
+.house-list-con .list-detail p.position{
+    margin:.3rem;
+}
+.house-list-con .list-detail a{
+    padding:.5rem 1rem;
+    border:1px solid #ee7500;
+    border-radius:5px;
+    color:#ee7500;
+    display:inline-block;
+    margin:1rem 0;
+    font-size:1rem;
+    text-decoration:none;
+}
+.house-list-con .list-detail a .if-m-right{
+    font-size:1rem;
+    top:1px;
+    left:2px;
+}
+.house-list-con .pages {
+    position:relative;
+    margin-top:2rem;
+    padding:1rem;
+}
+.house-list-con .pages ol{
+    position:absolute;
+    left:50%;
+    top:0;
+    transform:translate(-50%);
+    -webkit-transform:translate(-50%);
+}
+.house-list-con .pages li{
+    float:left;
+    margin:0 .5rem;
+}
+.house-list-con .pages li a{
+    padding:.2rem .4rem;
+    text-decoration:none;
+}
+.house-list-con .pages li a.active{
+    color:#fff;
+    background-color:#ee7500;
+    border-radius:5px;
+}
+.house-list-con .pages li .if{
+    top:2px;
+}
+p.notices{
+    font-size:24px;
+    color:#7ed321;
+    line-height:24px;
+    text-align:center;
+    margin-top:35px;
+    display:none;
+}
+
+
+/*房间详情页面*/
+.house-detail{
+    margin:1rem auto;
+}
+.house-detail .detail-left{
+    width:798px;
+    float:left;
+}
+
+/*房间详情页面-图片轮播部分*/
+.detail-left .house-pic{
+    background-color:#fff;
+    padding:10px;
+    border: 1px solid #e8e8e8;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    height: 418px;
+    width: 100%;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.detail-left .house-pic-left{
+    margin:9px;
+    height:380px;
+    width:570px;
+    background:url(/images/show-10.jpg) no-repeat center;
+    background-size:cover;
+    float:left;
+}
+.detail-left .house-pic-right{
+    float:left;
+    width:180px;
+    position:relative;
+    overflow:hidden;
+    height:100%;
+}
+.detail-left .house-pic-right ul{
+    height:9999px;
+    position:absolute;
+    top:0px;
+}
+.detail-left .house-pic-right li{
+    height:120px;
+    margin:9px 0;
+}
+.detail-left .house-pic-right img{
+    width:100%;
+    height:100%;
+    display:block;    
+}
+.detail-left .house-pic-right .jiantou-top,.detail-left .house-pic-right .jiantou-bottom{
+    position:absolute;
+    width:100%;
+    height:40px;
+    text-align:center;
+}
+.detail-left .house-pic-right .jiantou-top{
+    top:9px;
+    background-color:rgba(0,0,0,.5);
+    background: -webkit-linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,0)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,0)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,0)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,0)); /* 标准的语法 */
+}
+.detail-left .house-pic-right .jiantou-bottom{
+    bottom:9px;
+    background-color:rgba(0,0,0,.5);
+    background: -webkit-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.5)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.5)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.5)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.5)); /* 标准的语法 */
+}
+.detail-left .house-pic-right .if-m-top{
+    font-size:1.5rem;
+    top:2px;
+    cursor:pointer;
+}
+.detail-left .house-pic-right .if-m-bottom{
+    top:14px;
+    font-size:1.5rem;
+    cursor:pointer;
+}
+
+/*房间详情页面-房间介绍部分*/
+.house-detail .detail-con{
+    margin-bottom:1rem;
+    border:1px solid #e8e8e8;
+}
+.house-detail .detail-con .title{
+    background:#f6f6f6;
+    border-bottom:1px solid #e8e8e8;
+    height:58px;
+    line-height:58px;
+    font-size:1.2857em;
+    font-weight:bold;
+    padding-left:2rem;
+}
+.house-detail .detail-con .detail{
+    padding:1.5rem 2rem;
+    background-color:#fff;
+}
+.detail-left .house-info .detail p{
+    line-height:1.5rem;
+    margin-bottom:2rem;
+}
+.detail-left .house-info .detail p:last-child{
+    margin:0;
+}
+/*房间详情页面-房间配置部分*/
+
+.detail-left .house-card li{
+    float:left;
+    width:33%;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 1em;
+}
+
+/*房间详情页面-好邻居部分*/
+.detail-left .house-neighbour .detail{
+    padding-bottom:.5rem;
+}
+.detail-left .house-neighbour li{
+    float:left;
+    border:1px solid #e8e8e8;
+    width:168px;
+    height:153px;
+    margin-right:20px;
+    padding:1rem;
+    padding-right:0;
+    margin-bottom:1rem;
+}
+.detail-left .house-neighbour li:nth-child(4n){
+    margin:0;
+}
+.detail-left .house-neighbour .user-top span{
+    display:inline-block;
+    height:60px;
+    width:60px;
+    border-radius:10px;
+    background:url(/images/show-1.JPG) no-repeat center;
+    background-size:cover;
+    float:left;
+    margin-right:8px;
+}
+.detail-left .house-neighbour .user-top p{
+    font-size:18px;
+    text-align:left;
+    font-weight:bold;
+}
+.detail-left .house-neighbour .user-top a{
+    display:inline-block;
+    margin-top:7px;
+    padding:.27rem .5rem;
+    color:#fff;
+    background-color:#ee7500;
+    border-radius:5px;
+    text-decoration:none;
+}
+.detail-left .house-neighbour .user-top a.done{
+    color:#9b9b9b;
+    background-color:#e8e8e8;
+    cursor:auto;
+}
+.detail-left .house-neighbour .user-bottom{
+    margin-top:1rem;
+    
+}
+.detail-left .house-neighbour .user-bottom p{
+    line-height:1.5rem;
+}
+
+
+/*房间详情页面-地图部分*/
+.detail-left .house-map .detail{
+    height:396px;
+    padding:0;
+}
+/*房间详情页面-支付规则部分*/
+.detail-left .house-pay table{
+    width:100%;
+    text-align:center;
+    padding
+}
+.detail-left .house-pay thead{
+    background:#f6f6f5;
+    border-top:1px solid #e8e8e8;
+    border-bottom:1px solid #e8e8e8;
+}
+.detail-left .house-pay td,.detail-left .house-pay th{
+    padding:.8rem;
+    border-bottom:1px solid #e8e8e8;
+}
+/*房间详情页面-右侧*/
+.detail-right{
+    width:355px;
+    float:right;
+}
+/*右侧-房间信息*/
+.detail-right .room-name{
+    background-color:#fff;
+    padding:1.5rem 2rem;
+    border:1px solid #e8e8e8;
+}
+.detail-right .room-name h2{
+    margin:0;
+    font-size:20px;
+}
+.detail-right .room-name h3{
+    font-size:20px;
+    color:#ee7500;
+    margin:.8rem 0;
+}
+.detail-right .room-name p{
+    line-height:2rem;
+}
+.detail-right .room-name .btn{
+    margin-top:1rem;
+}
+.detail-right .room-name a{
+    padding:.1rem .5rem;
+    border-radius:5px;
+    text-decoration:none;
+    margin-right:.5rem;
+}
+.detail-right .room-name a:last-child{
+    margin-right:0;
+}
+.detail-right .room-name a.red{
+    color:#ff001f;
+    border:1px solid #ff001f;
+}
+.detail-right .room-name a.blue{
+    color:#4a90e2;
+    border:1px solid #4a90e2;
+}
+.detail-right .room-name a.yellow{
+    color:#ee7500;
+    border:1px solid #ee7500;
+}
+/*右侧-管家*/
+.detail-right .house-guanjia{
+    border:0;
+    margin:1rem 0;
+}
+.detail-right .house-guanjia .title{
+    font-size:16px;
+    border:1px solid #e8e8e8;
+    border-bottom:none;
+}
+.detail-right .house-guanjia .title p{
+    float:left;
+}
+.detail-right .house-guanjia .title .phone{
+    float:right;
+    padding-right:2rem;
+    color:#ee7500;
+}
+.detail-right .house-guanjia .detail{
+    padding:0;
+}
+.detail-right .house-guanjia .detail img{
+    width:100%;
+    display:block;
+}
+/*右侧-推荐房源*/
+.detail-right .house-recommend .detail{
+    padding-bottom:0;
+}
+.detail-right .house-recommend .list{
+    border-bottom:1px solid #e8e8e8;
+    margin-bottom:1.5rem;
+}
+.detail-right .house-recommend .list:last-child{
+    border-bottom:none;
+    margin-bottom:0;
+}
+.house-recommend .house-list-con .list-detail a{
+    margin-bottom:.5rem;
+}
+
+
+@media screen and (min-width : 900px) {
+    
+   .house-list-con .list img{
+        height:240px;
+    }
+}
+/*魔尔公寓主页样式*/
+.con-more .heading-MR{
+    padding-bottom:30px;
+}
+.con-more .org-banner{
+    background-size:cover!important;
+}
+.con-more .org-banner h1{
+    margin-top:6em!important;
+    background-color:rgba(139,111,75,.8);
+}
+.con-more .org-pic ul{
+    width:600%;
+}
+.con-more .org-pic li{
+    width:584px;
+    float:left;
+    display:block;
+}
+.con-more .org-details{
+    padding:0 2rem!important;
+}
+.con-more .org-details h2,.con-more .org-details h3{
+    font-size:1.125rem;
+}
+.con-more .org-details h3{
+    margin:1rem 0;
+    color:red;
+}
+.con-more .org-details a{
+    text-decoration:none;
+}
+.con-more .org-details a:hover{
+    color:#474747;
+}
+.con-more .org-details p{
+    line-height:1rem!important;
+}
+.con-more .org-details a.btn{
+    display:inline-block;
+    padding:.2rem 2rem;   
+    background-color:rgb(139,111,75);
+    color:#fff;
+    border-radius:8px;
+    border:1px solid #ddd;
+    text-decoration:none;
+    margin-top:1.5rem;
+    cursor:pointer;
+    text-align:center;
+}
+.con-more .org-details a span:first-child{
+    font-size:1rem;
+    letter-spacing:5px;
+}
+.con-more .room-service{
+    position:absolute;
+    left:2rem;
+    bottom:1rem;
+    height:50px!important;
+}
+.con-more .room-service li{
+    width:6.5rem;
+    float:left;
+    margin-bottom:.5rem;
+}
+.con-more .room-service li:last-child{
+    width:8rem;
+}
+.con-more .modal {    
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index:20000;  
+    display:none;  
+}
+.con-more .modal-bg{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.8);
+}
+.con-more .modal-content {
+    position:absolute;
+    top:100px;
+    left:50%;
+    transform:translate(-50%);
+    -webkit-transform:translate(-50%);
+    width: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px 30px 40px;
+}
+.con-more .modal-content h3 {
+    display: block;
+    font-size: 1.17em;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+.con-more .modal-content table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.con-more .modal-content table td {
+    width: 50%;
+    border: 1px solid #e8e8e8;
+    padding: 4px 25px;
+    position: relative;
+}
+.con-more .modal-content table td .must {
+    position: absolute;
+    left: 10px;
+    color: red;
+}
+.con-more .modal-content button {
+    border: 1px solid #e8e8e8;
+    margin: 30px 0;
+    background-color: #3a98fc;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 8px 60px;
+    cursor: pointer;
+}
+.con-more .modal-content table input,.con-more .modal-content table select {
+    height: 30px;
+    width: 100%;
+    border: 0;
+    outline: none;
+    padding: 0;
+}
+
+/*魔尔公寓房间详情页面*/
+
+.more-room .org-card .photo,.more-room .choose-card .photo{
+    height:14em!important;
+}
+/*
+ * -- TABLET (AND UP) MEDIA QUERIES -- ≥ 768px md
+ * On tablets and other medium-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+@media (min-width: 48em) {
+    body {
+        font-size: 14px;
+    }
+
+    .con-org .org-banner {
+        height: 35em;
+    }
+
+    .con-org .org-banner h1 {
+        margin-top:4em;
+    }
+
+    .con-org .org-banner p {
+        margin-bottom: 8em;
+    }
+
+    .org-room .org-details .slimScrollDiv{
+        margin-bottom:0em;
+    }
+    .org-room .org-details {
+        padding: 0 3em;
+       
+    }
+
+}
+
+/*
+ * -- Larger Tablet  --
+ * @media screen and (min-width: 64em)	≥ 1024px lg
+ */
+@media (min-width: 64em) {
+}
+
+/*
+ * -- DESKTOP (AND UP) MEDIA QUERIES -- ≥ 1280 xl
+ * On desktops and other large devices, we want to over-ride some
+ * of the mobile and tablet styles.
+ */
+@media (min-width: 80em) {
+}
+
+
+/*活动列表页面*/
+
+.con-activity{
+    background-color:#fff;
+}
+.con-activity .breadcrumb{
+    margin:1.5em 1em 0;
+    
+}
+.con-activity .breadcrumb li{
+    float:left;
+    line-height:5em;
+}
+.con-activity .breadcrumb li:last-child{
+    color:#bbb;
+}
+.con-activity .activity-hd{
+    background-color:#f6f6f6;
+    padding:1em 0;
+}
+.con-activity .activity-hd ul{
+    margin:0 1em;
+    padding:0 1em;
+    background-color:#fff;
+}
+.con-activity .activity-hd li{
+    float:left;
+    padding:1em 4em 1em 0; 
+    color:#000;
+    cursor:pointer        
+}
+.con-activity .activity-hd li.title{
+    color:#919191;
+}
+.con-activity .activity-hd li.active{
+    color:#ee7500;
+}
+.activity-content{
+    padding-top:2em;
+}
+.activity-content .activity-wrapper{
+    padding:0 1em;
+    margin-bottom:1.5em;
+}
+.activity-content .activity{
+    border:1px solid #e8e8e8;
+    height:33em;
+    position:relative;
+}
+.activity-content .activity a{
+    text-decoration:none;
+    display:block;
+}
+.activity-content .activity a:hover h3,.activity-content .activity a:hover .activityDetail{
+    color:#474747;
+}
+.activity-content .activity img{
+    width:100%;
+    height:220px;
+}
+.activity-content .activity-font{
+    padding:1em 1em 2em;
+
+}
+.activity-font .time{
+    color:#bbb;
+}
+.activity-font .if-riqi{
+    font-size:.8em;
+    margin-right:.5em;
+}
+.activity-font .activityDetail{
+    line-height:1.5em;
+    margin-top:1.5em;
+    margin-bottom:1.5em;
+}
+.activity-font .link{
+    position:absolute;
+    right:1em;
+    bottom:2em;
+    color:#ee7500;
+}
+.activity-content .page{
+    text-align:center;
+    margin-top:2em;
+    margin-bottom:3.5em;
+}
+.activity-content .page ul{
+    display:inline-block;
+}
+.activity-content .page li{
+    float:left;
+    margin-left:.8em;
+    padding:.5em 1em;
+    border:1px solid #e8e8e8;
+    cursor:pointer;
+}
+.activity-content .page li:hover,.activity-content .page li.active{
+    color:#fff;
+    background-color:#ee7500;
+}
+.activity-content .page li:first-child{
+    margin-left:0;
+}
+
+/*活动列表-活动详情页面*/
+
+.activity-detail .activity-content .activity-font{
+    padding:0 1em 2em;;
+}
+.activity-detail .breadcrumb{
+    border-bottom:1px solid #e8e8e8;
+}
+.activity-detail .activity-font{
+    width:800px;
+    margin:0 auto;
+}
+.activity-detail .activity-font .time{
+    margin-bottom:1em;
+} 

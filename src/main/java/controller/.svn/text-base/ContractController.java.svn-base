@@ -1,0 +1,198 @@
+package controller;
+
+import java.util.Date;
+import java.util.List;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.apache.commons.lang3.time.DurationFormatUtils;
+import org.jboss.logging.annotations.Param;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import dao.HouseDao;
+import dao.OrderDao;
+
+import util.DateUtil;
+import biz.ContractBiz;
+import biz.OrderBiz;
+import entity.Contract;
+import entity.House;
+import entity.Order;
+@RequestMapping("/contract")
+@Controller("ContractController")
+public class ContractController {
+	@Resource(name="contractBiz")
+	private ContractBiz contractBiz;
+
+	public ContractBiz getContractBiz() {
+		return contractBiz;
+	}
+
+	public void setContractBiz(ContractBiz contractBiz) {
+		this.contractBiz = contractBiz;
+	}
+	@Resource(name="orderBiz")
+	private OrderBiz orderBiz;
+	public OrderBiz getOrderBiz() {
+		return orderBiz;
+	}
+
+	public void setOrderBiz(OrderBiz orderBiz) {
+		this.orderBiz = orderBiz;
+	}
+	
+	/**
+	 * 添加合同，也就是控制合同页面的填充
+	 * @param request
+	 * @param response
+	 * @param session
+	 * @return
+	 */
+	@RequestMapping(value="updateContract")
+	public String  updateContract(HttpServletRequest request,HttpServletResponse response,HttpSession session){
+		String renterrealname = request.getParameter("renterrealname");//真实姓名
+		String renteridcard = request.getParameter("renteridcard");//身份证号
+		String rentertel = request.getParameter("rentertel");//电话号码
+		String startlivetime = request.getParameter("startlivetime");//开始时间
+		String leavelivetime = request.getParameter("leavelivetime");//离开时间
+		String period = request.getParameter("period");
+		String payType = request.getParameter("payType");
+		String hspersonnum = request.getParameter("hspersonnum");//入住人数
+		String houseinfoid = request.getParameter("houseinfoid");//房源id
+		String orderid = request.getParameter("orderid");//订单id
+		String orderstatus = request.getParameter("orderstatus");//订单状态
+		String insurancemoney = request.getParameter("insurancemoney");
+		String contractid = request.getParameter("contractid");
+		String status = request.getParameter("status");
+		String monthpay = request.getParameter("monthpay");
+		
+		String lodgerrealname = request.getParameter("lodgerrealname");
+		String lodgeridcard = request.getParameter("lodgeridcard");
+		String lodgertel = request.getParameter("lodgertel");
+		System.out.println(contractid+"dangqian");
+		System.out.println(lodgerrealname+"dangqian");
+		System.out.println(lodgeridcard+"dangqian");
+		System.out.println(lodgertel+"dangqian");
+		
+		Contract contract = new Contract();
+		
+		contract.setRenterrealname(renterrealname);
+		contract.setRenteridcard(renteridcard);
+		contract.setRentertel(rentertel);
+		contract.setStartlivetime(DateUtil.StringToDate(startlivetime));
+		contract.setLeavelivetime(DateUtil.StringToDate(leavelivetime));
+		
+		if(contractid!=null&&!contractid.replace(" ", "").equals("")){
+			System.out.println("00++===");
+			contract.setContractid(Integer.valueOf(contractid));
+		}
+
+		if(lodgerrealname!=null&&!lodgerrealname.replace(" ", "").equals("")){
+			contract.setLodgerrealname(lodgerrealname);
+		}
+		if(lodgeridcard!=null&&!lodgeridcard.replace(" ", "").equals("")){
+			contract.setLodgeridcard(lodgeridcard);
+		}
+		if(lodgertel!=null&&!lodgertel.replace(" ", "").equals("")){
+			contract.setLodgertel(lodgertel);
+		}
+		
+		
+		contract.setStatus(Integer.valueOf(status));
+		contract.setHouseinfoid(Integer.valueOf(houseinfoid));
+		contract.setHspersonnum(Integer.valueOf(hspersonnum));
+		
+		contract.setContractsigntime(new Date());
+		Order order = null;
+		if(orderid!=null&&!orderid.replace(" ", "").equals("")){
+			order = new Order();
+			System.out.println("========="+monthpay);
+			order.setOrderid(Integer.valueOf(orderid));
+			String renttimeStr = DurationFormatUtils.formatPeriod(DateUtil.StringToDate(startlivetime).getTime(), 
+					DateUtil.StringToDate(leavelivetime).getTime(), "M");
+			Integer renttime = Integer.valueOf(renttimeStr);
+			order.setRenttime(renttime);
+			Double totalprice  = Double.valueOf(monthpay) * renttime;
+			order.setTotalprice(totalprice);
+			
+			orderBiz.addOrder(order);
+		}
+	
+		contract.setInsurancemoney(Double.valueOf(insurancemoney));
+		if(order != null){
+			contract.setOrder(order);
+		}
+		
+		contractBiz.updateContact(contract);
+		return "contract";
+	}
+	@ResponseBody
+	@RequestMapping(value="findMsg")
+	public List<Contract> findMsg(HttpSession session){
+		Integer[] houseinfoids =   (Integer[]) session.getAttribute("houseinfoids");
+		System.out.println("---------------------===============");
+		for (Integer integer : houseinfoids) {
+			System.out.println(integer+"shuzuzuzuzuzu");
+		}
+		List<Contract> cList = contractBiz.findContractByHouseId(houseinfoids, 0);
+		for (Contract contract : cList) {
+			System.out.println(contract.getRenterrealname());
+		}
+		return cList;
+	}
+	/**
+	 * 根据房源id查看合同列表和合同状态
+	 * @param houseinfoid
+	 * @param status
+	 * @param session
+	 * @param model
+	 * @return
+	 */
+	@RequestMapping(value="findContractByHouseId")
+	public String findContractByHouseId(HttpSession session,Model model){
+		Integer[] houseinfoids =  (Integer[]) session.getAttribute("houseinfoids");
+		for (Integer integer : houseinfoids) {
+			System.out.println(integer+"=============******");
+		}
+		
+		List<Contract> cList = contractBiz.findContractByHouseId(houseinfoids, 0);
+		for (Contract contract : cList) {
+			System.out.println(contract.getRenterrealname());
+		}
+		model.addAttribute("cList",cList);
+		return "contract-list";
+	}
+	/**
+	 * 根据房源id查询合同的全部信息，跳转到房东的合同页面
+	 * @param contractid
+	 * @return
+	 */
+	@RequestMapping(value="findContractsByContractid")
+	public String findContractsByContractid(Integer contractid,Model model){
+		System.out.println("进入查询合同的信息的页面++++===="+contractid);
+		Contract contract = contractBiz.findContractsByContractid(contractid);
+		System.out.println(contract.getOrder().getOrderid()+",合同中的orderid"+"hetong shuju "+
+						contract.getOrder().getHouse().getHouseinfoid());
+		model.addAttribute("houseinfoid", contract.getOrder().getHouse().getHouseinfoid());
+		model.addAttribute("contract", contract);
+		return "contract-landlord";
+	}
+	//根据订单的id查询合同的信息
+	@RequestMapping(value="findContracts")
+	public String findContracts(@RequestParam(value="orderid")Integer orderId,Model model){
+		System.out.println("进入查询合同的信息的页面++++orderId===="+orderId);
+		Contract contract = contractBiz.findContracts(orderId);
+		model.addAttribute("contract", contract);
+		return "contract-landlord";
+	}
+
+		
+}

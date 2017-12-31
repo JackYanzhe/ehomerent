@@ -1,0 +1,4 @@
+driver=oracle.jdbc.driver.OracleDriver
+url=jdbc\:oracle\:thin\:@172.16.23.146\:1521\:orcl
+uname=ehome
+pwd=123456

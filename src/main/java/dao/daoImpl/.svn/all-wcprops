@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ehomeRepository/!svn/ver/469/ehomerent/src/main/java/dao/daoImpl
+END
+ContractDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/ehomeRepository/!svn/ver/412/ehomerent/src/main/java/dao/daoImpl/ContractDaoImpl.java
+END
+quickrentDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/ehomeRepository/!svn/ver/304/ehomerent/src/main/java/dao/daoImpl/quickrentDaoImpl.java
+END
+SubscribeDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/ehomeRepository/!svn/ver/469/ehomerent/src/main/java/dao/daoImpl/SubscribeDaoImpl.java
+END
+UserDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/ehomeRepository/!svn/ver/318/ehomerent/src/main/java/dao/daoImpl/UserDaoImpl.java
+END
+CollectionDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/ehomeRepository/!svn/ver/366/ehomerent/src/main/java/dao/daoImpl/CollectionDaoImpl.java
+END
+OrderDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/ehomeRepository/!svn/ver/406/ehomerent/src/main/java/dao/daoImpl/OrderDaoImpl.java
+END
+HouseDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/ehomeRepository/!svn/ver/448/ehomerent/src/main/java/dao/daoImpl/HouseDaoImpl.java
+END

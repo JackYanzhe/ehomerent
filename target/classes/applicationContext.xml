@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	                    http://www.springframework.org/schema/beans/spring-beans.xsd
+	                    http://www.springframework.org/schema/context 
+	                    http://www.springframework.org/schema/context/spring-context.xsd
+	                    http://www.springframework.org/schema/tx 
+	                    http://www.springframework.org/schema/tx/spring-tx.xsd
+	                    http://www.springframework.org/schema/aop 
+	                    http://www.springframework.org/schema/aop/spring-aop.xsd
+	                    http://www.springframework.org/schema/mvc 
+	                    http://www.springframework.org/schema/mvc/spring-mvc.xsd
+	                    http://www.springframework.org/schema/task
+     					http://www.springframework.org/schema/task/spring-task.xsd">
+	     
+	 <!-- 实现springMvc和spring配置文件的分离，可在web.xml文件中进行相应设置 -->        
+	            
+	<!-- 配置注解扫描Biz包,使用exclude-filter（不包含） 进行少选，此时要选默认位置use-default-filters="true"-->
+	<context:component-scan base-package="controller,biz,dao" use-default-filters="true">
+	  <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+	</context:component-scan>
+	
+	
+	<!-- <context:annotation-config/> -->
+	<!-- 下边可配置属于spring框架的数据源信息、事务aop等 -->
+	<!-- 配置引入外部数据源jdbc.properties文件，便于以后更改数据源信息 ,注意class对应类的路径-->
+		<bean name="propertyReader" class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer">
+		   <!-- 注入name属性为:location -->
+		   <property name="location">
+		     <!-- 注意此时需要加上classpath来确保路径正确 -->
+		     <value>classpath:jdbc.properties</value>
+		   </property>
+		</bean>
+	 <!-- 将hibernate.cfg.xml文件注入到spring中 -->
+	  <!--  使用连接池，配置数据源，配置数据库连接涉及的相关信息-->
+		 <bean name="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		     <!-- 属性注入 -->
+		     <property name="driverClassName" value="${driver}"></property>
+		     <property name="url" value="${url}"></property>
+		     <property name="username" value="${uname}"></property>
+		      <property name="password" value="${pwd}"></property>
+		 </bean>
+	  
+	  
+	 <!--  配置sessionFactory -->
+		 <bean name="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		      <!--注入数据源  -->
+			  <property name="dataSource" ref="dataSource"></property>
+			  <!-- 注入hibernate相关属性 -->
+			  <property name="hibernateProperties">
+			    <props>
+			       <prop key="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</prop>
+			       <prop key="javax.persistence.validation.mode">none</prop>
+			        <!-- <prop key="hibernate.show_sql">true</prop>
+			       <prop key="hibernate.format_sql">true</prop>  -->
+			    </props>
+			  </property>
+			 
+			  <!-- 注入相关映射信息对应的包路径，此时只需要填写在src下的包名即可，不用写对应的映射文件名，框架引用时会自动扫描 -->
+	      <property name="mappingResources">
+			<list>
+				<value>entity/Order.hbm.xml</value>
+				<value>entity/Contract.hbm.xml</value>
+				<value>entity/House.hbm.xml</value>
+				<value>entity/Charge.hbm.xml</value>
+				<value>entity/Furniture.hbm.xml</value>
+				<value>entity/Electric.hbm.xml</value>
+				<value>entity/Houseimg.hbm.xml</value>
+				<value>entity/User.hbm.xml</value>
+				<value>entity/Collection.hbm.xml</value>	
+				<value>entity/Subscribe.hbm.xml</value>
+
+			</list> 
+		</property>  
+					  
+		</bean>
+		
+		 <!-- 配置事务管理器 -->
+	   <bean name="txManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+	         <property name="sessionFactory" ref="sessionFactory"></property>
+	   </bean> 
+	   <!-- 配置事务通知 -->
+
+	    <tx:advice id="txAdvice" transaction-manager="txManager">
+	      <tx:attributes>
+	        <tx:method name="add*" propagation="REQUIRED" read-only="false"/>
+	        <tx:method name="insert*" propagation="REQUIRED" read-only="false"/>
+	        <tx:method name="save*" propagation="REQUIRED" read-only="false"/>
+	        <tx:method name="update*" propagation="REQUIRED" read-only="false"/>
+	        <tx:method name="delete*" propagation="REQUIRED" read-only="false"/>
+	        <tx:method name="get*" propagation="REQUIRED" read-only="true"/>
+	        <tx:method name="login*" propagation="REQUIRED"/>
+	        <tx:method name="load*" propagation="REQUIRED" read-only="true"/>
+	        <tx:method name="find*" propagation="REQUIRED" read-only="true"/>
+	        <tx:method name="*" read-only="true"/>
+	      </tx:attributes>
+	   </tx:advice> 
+
+	   <!-- 自动创建代理织入切面（将通知和切点织入切面的过程产生代理对象） -->
+	   <aop:aspectj-autoproxy /> 
+	   <aop:config>
+	     <aop:pointcut expression="execution(* controller.*.*(..))" id="myPoint"/>
+	     <aop:advisor advice-ref="txAdvice" pointcut-ref="myPoint"/>
+	   </aop:config> 
+	   
+ 
+	   
+	     <bean name="userDao" class="dao.daoImpl.UserDaoImpl">
+	         <property name="sessionFactory" ref="sessionFactory"></property>
+	    </bean>  
+	     <bean name="userBiz" class="biz.bizImpl.UserBizImpl">
+	         <property name="userDao" ref="userDao"></property>
+
+	    </bean>   
+	    
+
+		 <bean name="collectionDao" class="dao.daoImpl.CollectionDaoImpl">
+	         <property name="sessionFactory" ref="sessionFactory"></property>
+	    </bean>
+		 <bean name="collectionBiz" class="biz.bizImpl.CollectionBizImpl">
+	         <property name="collectionDao" ref="collectionDao"></property>
+	    </bean>
+
+        
+        <bean name="quickrentDao" class="dao.daoImpl.quickrentDaoImpl">
+              <property name="sessionFactory" ref="sessionFactory"></property>
+        </bean>
+         <bean name="quickrentBiz" class="biz.bizImpl.quickrentBizImpl">
+             <property name="quickrentDao" ref="quickrentDao"></property>
+        </bean> 
+	       	    
+</beans>

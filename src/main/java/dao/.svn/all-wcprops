@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ehomeRepository/!svn/ver/469/ehomerent/src/main/java/dao
+END
+ContractDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ehomeRepository/!svn/ver/413/ehomerent/src/main/java/dao/ContractDao.java
+END
+quickrentDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/ehomeRepository/!svn/ver/275/ehomerent/src/main/java/dao/quickrentDao.java
+END
+SubscribeDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/ehomeRepository/!svn/ver/457/ehomerent/src/main/java/dao/SubscribeDao.java
+END
+UserDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ehomeRepository/!svn/ver/385/ehomerent/src/main/java/dao/UserDao.java
+END
+CollectionDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/ehomeRepository/!svn/ver/310/ehomerent/src/main/java/dao/CollectionDao.java
+END
+OrderDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ehomeRepository/!svn/ver/384/ehomerent/src/main/java/dao/OrderDao.java
+END
+HouseDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ehomeRepository/!svn/ver/447/ehomerent/src/main/java/dao/HouseDao.java
+END

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="entity.Subscribe" table="TB_SUBSCRIBE" schema="EHOME">
+        <id name="subscribeid" type="java.lang.Long">
+            <column name="SUBSCRIBEID" precision="10" scale="0" />
+           <generator class="sequence">
+        			<param name="sequence">seq_subscribe</param>
+        		</generator>
+        </id>
+        <many-to-one name="user" class="entity.User" fetch="select">
+            <column name="USERID" precision="22" scale="0" />
+        </many-to-one>
+        <property name="rentmoneymax" type="java.lang.Double">
+            <column name="RENTMONEYMAX" precision="10" />
+        </property>
+        <property name="rentmoneymin" type="java.lang.Double">
+            <column name="RENTMONEYMIN" precision="10" />
+        </property>
+        <property name="circletime" type="java.lang.String">
+            <column name="CIRCLETIME" length="20" />
+        </property>
+        <property name="renttype" type="java.lang.String">
+            <column name="RENTTYPE" length="20" />
+        </property>
+        <property name="subsubmitdate" type="java.lang.String">
+            <column name="SUBSUBMITDATE" length="50" />
+        </property>
+        <property name="housetype" type="java.lang.String">
+            <column name="HOUSETYPE" length="50" />
+        </property>
+         <property name="subarealocalinfo" type="java.lang.String">
+            <column name="SUBAREALOCALINFO" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

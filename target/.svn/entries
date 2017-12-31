@@ -1,0 +1,37 @@
+10
+
+dir
+478
+https://yanzhe/svn/ehomeRepository/ehomerent/target
+https://yanzhe/svn/ehomeRepository
+
+
+
+2017-11-23T01:38:54.728784Z
+375
+u4
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+de74e8c9-42fc-e842-b105-bca820db0956
+
+classes
+dir
+
+m2e-jee
+dir
+
+test-classes
+dir
+

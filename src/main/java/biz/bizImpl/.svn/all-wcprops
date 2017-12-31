@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ehomeRepository/!svn/ver/460/ehomerent/src/main/java/biz/bizImpl
+END
+quickrentBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/ehomeRepository/!svn/ver/426/ehomerent/src/main/java/biz/bizImpl/quickrentBizImpl.java
+END
+SubscribeBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/ehomeRepository/!svn/ver/460/ehomerent/src/main/java/biz/bizImpl/SubscribeBizImpl.java
+END
+UserBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/ehomeRepository/!svn/ver/253/ehomerent/src/main/java/biz/bizImpl/UserBizImpl.java
+END
+CollectionBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/ehomeRepository/!svn/ver/307/ehomerent/src/main/java/biz/bizImpl/CollectionBizImpl.java
+END
+OrderBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/ehomeRepository/!svn/ver/382/ehomerent/src/main/java/biz/bizImpl/OrderBizImpl.java
+END
+HouseBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/ehomeRepository/!svn/ver/437/ehomerent/src/main/java/biz/bizImpl/HouseBizImpl.java
+END
+ContractBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/ehomeRepository/!svn/ver/415/ehomerent/src/main/java/biz/bizImpl/ContractBizImpl.java
+END

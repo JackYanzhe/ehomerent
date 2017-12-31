@@ -1,0 +1,84 @@
+﻿.as-bar{
+	cursor:default;
+	box-sizing:border-box;
+	margin:0;padding:0;
+	width:100%;
+	position:relative;
+	display:inline-block;
+	background:#474747;
+	border:1px solid #fff;
+	border-radius:3px;
+	-moz-user-select:none; /*火狐*/
+    -webkit-user-select:none; /*webkit浏览器*/
+    -ms-user-select:none; /*IE10*/
+    -khtml-user-select:none; /*早期浏览器*/
+    user-select:none;
+}
+.as-bar .as-box{
+	z-index:1999;
+	cursor:move;
+	box-sizing:border-box;
+	position:absolute;
+	display:inline-block;
+    padding:10px 0;
+    text-align:center;
+	background:#e8e8e8;
+	color:#777777;
+	border-radius:3px;
+}
+.as-bar .as-grid {
+	box-sizing:border-box;
+	position:relative;
+	display:inline-block;
+	width:16.659%;
+	padding:10px 0;
+	margin:0;
+	background:#777777;
+	color:#fff;
+	text-align:center;
+	border-left:1px solid rgba(255, 255, 255, 0.20);
+}
+.as-tip,.as-reset,.as-success {
+	display:inline-block;
+	z-index:1996;
+	color:#fff;
+	width:100%;
+	padding:10px 0;text-align:center;
+	margin:0 auto;
+	position:absolute;
+    font-style:normal;
+	background:rgba(119, 119, 119, 0.9);
+}
+.as-reset{       
+    display:none;   
+    z-index:2000;  
+	cursor:pointer;
+	background:rgba(221, 63, 20, 0.95);
+}
+.as-success {   
+    display:none;
+    z-index:2000; 
+	background:rgba(98, 189, 41, 0.95);
+
+}				
+.as-bar .light{
+	z-index:1997;
+	position: absolute;
+	left: -180px;
+	top: 0;
+	width: 50%;
+	padding:10px 0;/* 根据图像高度自行修改 */
+	background-image: -moz-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.3),rgba(255,255,255,0));
+	background-image: -webkit-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.3),rgba(255,255,255,0));
+	transform: skewx(-25deg);
+	-o-transform: skewx(-25deg);
+	-moz-transform: skewx(-25deg);
+	-webkit-transform: skewx(-25deg);
+	-webkit-animation: lighter 2s linear infinite;
+}
+@-webkit-keyframes lighter{
+	0% {left:0px;opacity: 1}
+	50% {left:50%;opacity: 1}
+	75% {left:50% ;opacity: 0}
+	100%{left:0px;opacity: 0}
+	}
